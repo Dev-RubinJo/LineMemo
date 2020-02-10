@@ -6,4 +6,20 @@
 //  Copyright © 2020 YooBin Jo. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class BaseVC: UIViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
+    }
+    
+    func appearIndicator() {
+        self.indicator.show()
+    }
+    
+    func disappearIndicator() {
+        self.indicator.dismiss()
+    }
+}

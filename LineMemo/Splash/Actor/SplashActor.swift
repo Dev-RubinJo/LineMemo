@@ -6,4 +6,14 @@
 //  Copyright © 2020 YooBin Jo. All rights reserved.
 //
 
-import Foundation
+class SplashActor: SplashActorDelegate {
+    
+    static let shared = SplashActor()
+    private init() {}
+    
+    weak var view: SplashVCRouterDelegate?
+    
+    func didLoadSplash() {
+        self.view?.presentMainVC()
+    }
+}

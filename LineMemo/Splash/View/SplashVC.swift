@@ -8,23 +8,40 @@
 
 import UIKit
 
-class SplashVC: UIViewController {
-
+class SplashVC: BaseVC, SplashVCDelegate {
+    
+    static let viewRouter: SplashVCRouterDelegate = SplashVC()
+    weak var actor: SplashActorDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.initVC()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.actor?.didLoadSplash()
     }
-    */
-
+    
+    func initVC() {
+        self.setDarkModeUI()
+    }
+    
+    func setDarkModeUI() {
+        
+    }
+}
+extension SplashVC: SplashVCRouterDelegate {
+    func makeSplashVC() -> SplashVC {
+        let vc = SplashVC()
+        let actor = SplashActor.shared
+        
+        vc.actor = actor
+        actor.view = vc
+        return vc
+    }
+    
+    func presentMainVC() {
+        
+    }
 }

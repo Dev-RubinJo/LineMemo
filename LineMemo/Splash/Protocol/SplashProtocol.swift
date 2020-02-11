@@ -6,4 +6,21 @@
 //  Copyright © 2020 YooBin Jo. All rights reserved.
 //
 
-import Foundation
+protocol SplashVCDelegate: BaseVCProtocol {
+    
+    var actor: SplashActorDelegate? { get set }
+}
+
+protocol SplashVCRouterDelegate: class {
+    
+    func makeSplashVC() -> SplashVC
+    
+    func presentMainVC()
+}
+
+protocol SplashActorDelegate: class {
+    
+    var view: SplashVCRouterDelegate? { get set }
+    
+    func didLoadSplash()
+}

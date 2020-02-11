@@ -13,6 +13,11 @@
 		434D2B4923F2C54200E1E0D1 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434D2B4723F2C54200E1E0D1 /* SplashVC.swift */; };
 		434D2B4A23F2C54200E1E0D1 /* SplashVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 434D2B4823F2C54200E1E0D1 /* SplashVC.xib */; };
 		434D2B4D23F2C8E700E1E0D1 /* SplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434D2B4C23F2C8E700E1E0D1 /* SplashTests.swift */; };
+		43527EE623F2CFBC00291561 /* MainProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43527EE523F2CFBC00291561 /* MainProtocol.swift */; };
+		43527EE823F2CFD400291561 /* MainActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43527EE723F2CFD400291561 /* MainActor.swift */; };
+		43527EEB23F2CFE700291561 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43527EE923F2CFE700291561 /* MainVC.swift */; };
+		43527EEC23F2CFE700291561 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43527EEA23F2CFE700291561 /* MainVC.xib */; };
+		43527EEF23F2CFFA00291561 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43527EEE23F2CFFA00291561 /* MainTests.swift */; };
 		43C285F823F157B3007D3714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C285F723F157B3007D3714 /* AppDelegate.swift */; };
 		43C285FA23F157B3007D3714 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C285F923F157B3007D3714 /* SceneDelegate.swift */; };
 		43C2860123F157B4007D3714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C2860023F157B4007D3714 /* Assets.xcassets */; };
@@ -45,6 +50,11 @@
 		434D2B4723F2C54200E1E0D1 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 		434D2B4823F2C54200E1E0D1 /* SplashVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashVC.xib; sourceTree = "<group>"; };
 		434D2B4C23F2C8E700E1E0D1 /* SplashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashTests.swift; sourceTree = "<group>"; };
+		43527EE523F2CFBC00291561 /* MainProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainProtocol.swift; sourceTree = "<group>"; };
+		43527EE723F2CFD400291561 /* MainActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainActor.swift; sourceTree = "<group>"; };
+		43527EE923F2CFE700291561 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		43527EEA23F2CFE700291561 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
+		43527EEE23F2CFFA00291561 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
 		43C285F423F157B3007D3714 /* LineMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C285F723F157B3007D3714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C285F923F157B3007D3714 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +133,49 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		43527EE123F2CF8E00291561 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				43527EE223F2CF9600291561 /* View */,
+				43527EE323F2CF9C00291561 /* Actor */,
+				43527EE423F2CF9F00291561 /* Protocol */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		43527EE223F2CF9600291561 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43527EE923F2CFE700291561 /* MainVC.swift */,
+				43527EEA23F2CFE700291561 /* MainVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		43527EE323F2CF9C00291561 /* Actor */ = {
+			isa = PBXGroup;
+			children = (
+				43527EE723F2CFD400291561 /* MainActor.swift */,
+			);
+			path = Actor;
+			sourceTree = "<group>";
+		};
+		43527EE423F2CF9F00291561 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				43527EE523F2CFBC00291561 /* MainProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		43527EED23F2CFEA00291561 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				43527EEE23F2CFFA00291561 /* MainTests.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		43C285EB23F157B2007D3714 = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +201,7 @@
 			children = (
 				43C2861923F158EA007D3714 /* Config */,
 				43C2862C23F15A4B007D3714 /* Splash */,
+				43527EE123F2CF8E00291561 /* Main */,
 				43C285F723F157B3007D3714 /* AppDelegate.swift */,
 				43C285F923F157B3007D3714 /* SceneDelegate.swift */,
 				43C2860023F157B4007D3714 /* Assets.xcassets */,
@@ -161,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				434D2B4B23F2C8DA00E1E0D1 /* Splash */,
+				43527EED23F2CFEA00291561 /* Main */,
 				43C2860E23F157B5007D3714 /* LineMemoTests.swift */,
 				43C2861023F157B5007D3714 /* Info.plist */,
 			);
@@ -312,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C2860423F157B4007D3714 /* LaunchScreen.storyboard in Resources */,
+				43527EEC23F2CFE700291561 /* MainVC.xib in Resources */,
 				434D2B4A23F2C54200E1E0D1 /* SplashVC.xib in Resources */,
 				43C2860123F157B4007D3714 /* Assets.xcassets in Resources */,
 			);
@@ -378,9 +434,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43527EE823F2CFD400291561 /* MainActor.swift in Sources */,
 				434D2B4623F2C53300E1E0D1 /* SplashActor.swift in Sources */,
 				43C285F823F157B3007D3714 /* AppDelegate.swift in Sources */,
+				43527EE623F2CFBC00291561 /* MainProtocol.swift in Sources */,
 				43C2862423F159C0007D3714 /* UIColor.swift in Sources */,
+				43527EEB23F2CFE700291561 /* MainVC.swift in Sources */,
 				43C2861B23F15921007D3714 /* BaseVC.swift in Sources */,
 				43C2862023F15980007D3714 /* String.swift in Sources */,
 				434D2B4023F2C50D00E1E0D1 /* SplashProtocol.swift in Sources */,
@@ -399,6 +458,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				434D2B4D23F2C8E700E1E0D1 /* SplashTests.swift in Sources */,
+				43527EEF23F2CFFA00291561 /* MainTests.swift in Sources */,
 				43C2860F23F157B5007D3714 /* LineMemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

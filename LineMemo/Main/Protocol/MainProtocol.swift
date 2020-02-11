@@ -1,9 +1,22 @@
 //
-//  MainProtocl.swift
+//  MainProtocol.swift
 //  LineMemo
 //
 //  Created by YooBin Jo on 2020/02/11.
 //  Copyright © 2020 YooBin Jo. All rights reserved.
 //
 
-import Foundation
+protocol MainVCDelegate: BaseVCProtocol {
+    
+    var actor: MainActorDelegate? { get set }
+}
+
+protocol MainVCRouterDelegate: class {
+    
+    func makeMainVC() -> MainVC
+}
+
+protocol MainActorDelegate: class {
+    
+    var view: MainVCRouterDelegate? { get set }
+}

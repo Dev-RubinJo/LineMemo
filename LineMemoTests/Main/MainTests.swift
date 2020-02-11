@@ -24,6 +24,12 @@ class MainTests: XCTestCase {
         
         XCTAssertNotNil(vc)
     }
+    
+    func testMainVCActorIsNil() {
+        let vc = MainVC.viewRouter.makeMainVC()
+        
+        XCTAssertNotNil(vc.actor!)
+    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

@@ -41,7 +41,7 @@ extension SplashVC: SplashVCRouterDelegate {
         return vc
     }
     
-    func presentMainVC() {
-        
+    func presentMainVC() -> String {
+        return "Go to Main"
     }
 }

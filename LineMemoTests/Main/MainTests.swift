@@ -20,7 +20,7 @@ class MainTests: XCTestCase {
     }
     
     func testMakeMainVC() {
-        let vc = MainVC.viewRouter.makeSplashVC()
+        let vc = MainVC.viewRouter.makeMainVC()
         
         XCTAssertNotNil(vc)
     }

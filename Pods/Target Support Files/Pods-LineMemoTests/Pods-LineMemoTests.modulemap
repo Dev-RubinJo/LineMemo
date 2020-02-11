@@ -1,0 +1,6 @@
+framework module Pods_LineMemoTests {
+  umbrella header "Pods-LineMemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

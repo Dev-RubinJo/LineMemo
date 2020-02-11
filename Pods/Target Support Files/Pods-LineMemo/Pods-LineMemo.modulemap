@@ -1,0 +1,6 @@
+framework module Pods_LineMemo {
+  umbrella header "Pods-LineMemo-umbrella.h"
+
+  export *
+  module * { export * }
+}

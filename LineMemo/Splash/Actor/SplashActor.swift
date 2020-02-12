@@ -7,13 +7,17 @@
 //
 
 class SplashActor: SplashActorDelegate {
-    
-    static let shared = SplashActor()
+
+    static var shared: SplashActorDelegate? = SplashActor()
     private init() {}
-    
+
     weak var view: SplashVCRouterDelegate?
     
     func didLoadSplash() {
         self.view?.presentMainVC()
+    }
+    
+    deinit {
+        print("deinit")
     }
 }

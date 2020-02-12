@@ -12,6 +12,7 @@ class SplashVC: BaseVC, SplashVCDelegate {
     
     @IBOutlet weak var splashLabel: UILabel!
     
+    private let _window: UIWindow = UIApplication.shared.windows.first ?? UIApplication.shared.keyWindow ?? UIWindow.init(frame: UIScreen.main.bounds)
     static let viewRouter: SplashVCRouterDelegate = SplashVC()
     weak var actor: SplashActorDelegate?
     
@@ -45,16 +46,26 @@ class SplashVC: BaseVC, SplashVCDelegate {
     }
 }
 extension SplashVC: SplashVCRouterDelegate {
+    
+    weak var window: UIWindow? {
+        get {
+            self._window
+        }
+    }
+    
     func makeSplashVC() -> SplashVC {
         let vc = SplashVC()
         let actor = SplashActor.shared
+//        let actor = SplashActor()
         
         vc.actor = actor
-        actor.view = vc
+        actor?.view = vc
         return vc
     }
     
-    func presentMainVC() -> String {
-        return "Go to Main"
+    func presentMainVC() {
+        SplashActor.shared = nil
+        self.window?.rootViewController = MainVC.viewRouter.makeMainVC()
+        self.window?.makeKeyAndVisible()
     }
 }

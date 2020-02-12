@@ -6,6 +6,8 @@
 //  Copyright © 2020 YooBin Jo. All rights reserved.
 //
 
+import UIKit
+
 protocol SplashVCDelegate: BaseVCProtocol {
     
     var actor: SplashActorDelegate? { get set }
@@ -13,9 +15,11 @@ protocol SplashVCDelegate: BaseVCProtocol {
 
 protocol SplashVCRouterDelegate: class {
     
+    var window: UIWindow? { get }
+    
     func makeSplashVC() -> SplashVC
     
-    func presentMainVC() -> String
+    func presentMainVC()
 }
 
 protocol SplashActorDelegate: class {

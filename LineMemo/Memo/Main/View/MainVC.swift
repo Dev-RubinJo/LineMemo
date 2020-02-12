@@ -30,7 +30,10 @@ class MainVC: BaseVC, MainVCDelegate {
 extension MainVC: MainVCRouterDelegate {
     func makeMainVC() -> MainVC {
         let vc = MainVC()
+        let actor = MainActor.shared
         
+        vc.actor = actor
+        actor.view = vc
         return vc
     }
 }

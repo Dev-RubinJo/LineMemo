@@ -10,6 +10,8 @@ import UIKit
 
 class SplashVC: BaseVC, SplashVCDelegate {
     
+    @IBOutlet weak var splashLabel: UILabel!
+    
     static let viewRouter: SplashVCRouterDelegate = SplashVC()
     weak var actor: SplashActorDelegate?
     
@@ -23,12 +25,23 @@ class SplashVC: BaseVC, SplashVCDelegate {
         self.actor?.didLoadSplash()
     }
     
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        self.setDarkModeUI()
+    }
+    
     func initVC() {
         self.setDarkModeUI()
     }
     
     func setDarkModeUI() {
-        
+        if self.isDarkMode {
+            self.view.backgroundColor = .black
+            self.splashLabel.textColor = .white
+        } else {
+            self.view.backgroundColor = UIColor(hex: ColorPalette.splashBGColor, alpha: 1.0)
+            self.splashLabel.textColor = .white
+        }
     }
 }
 extension SplashVC: SplashVCRouterDelegate {

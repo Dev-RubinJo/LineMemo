@@ -6,6 +6,7 @@ target 'LineMemo' do
   use_modular_headers!
 
   # Pods for LineMemo
+  pod 'RealmSwift'
 
   target 'LineMemoTests' do
     inherit! :search_paths

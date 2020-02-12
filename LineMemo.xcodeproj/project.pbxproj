@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		15562EFB98A5C20DADD89281 /* Pods_LineMemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B41070183A41240F0506DD2 /* Pods_LineMemoTests.framework */; };
+		1EEBD94C205CAA0793EA6D67 /* libPods-LineMemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 474FF4FDBCD4134C99BEC725 /* libPods-LineMemo.a */; };
 		434D2B4023F2C50D00E1E0D1 /* SplashProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434D2B3F23F2C50D00E1E0D1 /* SplashProtocol.swift */; };
 		434D2B4623F2C53300E1E0D1 /* SplashActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434D2B4523F2C53300E1E0D1 /* SplashActor.swift */; };
 		434D2B4923F2C54200E1E0D1 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434D2B4723F2C54200E1E0D1 /* SplashVC.swift */; };
@@ -18,6 +18,8 @@
 		43527EEB23F2CFE700291561 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43527EE923F2CFE700291561 /* MainVC.swift */; };
 		43527EEC23F2CFE700291561 /* MainVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43527EEA23F2CFE700291561 /* MainVC.xib */; };
 		43527EEF23F2CFFA00291561 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43527EEE23F2CFFA00291561 /* MainTests.swift */; };
+		43527EF523F389DC00291561 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43527EF423F389DC00291561 /* Memo.swift */; };
+		43527EF723F38A4100291561 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43527EF623F38A4100291561 /* RealmManager.swift */; };
 		43C285F823F157B3007D3714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C285F723F157B3007D3714 /* AppDelegate.swift */; };
 		43C285FA23F157B3007D3714 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C285F923F157B3007D3714 /* SceneDelegate.swift */; };
 		43C2860123F157B4007D3714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C2860023F157B4007D3714 /* Assets.xcassets */; };
@@ -31,7 +33,7 @@
 		43C2862723F159EC007D3714 /* BaseVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862623F159EC007D3714 /* BaseVCProtocol.swift */; };
 		43C2862923F15A0B007D3714 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862823F15A0B007D3714 /* IndicatorView.swift */; };
 		43C2862B23F15A26007D3714 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862A23F15A26007D3714 /* ColorPalette.swift */; };
-		AB4C43291B94E7F9D109FBB0 /* Pods_LineMemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C056C4C436087AD09F721F1D /* Pods_LineMemo.framework */; };
+		CFF7FDC3771524EB4A5D6560 /* libPods-LineMemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60ABE6F7D8BB510CD4C907 /* libPods-LineMemoTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		43527EE923F2CFE700291561 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		43527EEA23F2CFE700291561 /* MainVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainVC.xib; sourceTree = "<group>"; };
 		43527EEE23F2CFFA00291561 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
+		43527EF423F389DC00291561 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
+		43527EF623F38A4100291561 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		43C285F423F157B3007D3714 /* LineMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C285F723F157B3007D3714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C285F923F157B3007D3714 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,11 +76,11 @@
 		43C2862623F159EC007D3714 /* BaseVCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCProtocol.swift; sourceTree = "<group>"; };
 		43C2862823F15A0B007D3714 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		43C2862A23F15A26007D3714 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
-		5B41070183A41240F0506DD2 /* Pods_LineMemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LineMemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		474FF4FDBCD4134C99BEC725 /* libPods-LineMemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LineMemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F4C051CDC667D3AC01D46F /* Pods-LineMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineMemo.release.xcconfig"; path = "Target Support Files/Pods-LineMemo/Pods-LineMemo.release.xcconfig"; sourceTree = "<group>"; };
 		989DE2FE8D22EF88A6C4B36F /* Pods-LineMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineMemo.debug.xcconfig"; path = "Target Support Files/Pods-LineMemo/Pods-LineMemo.debug.xcconfig"; sourceTree = "<group>"; };
 		AF0488ADFFE60EF9DE21E625 /* Pods-LineMemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineMemoTests.debug.xcconfig"; path = "Target Support Files/Pods-LineMemoTests/Pods-LineMemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		C056C4C436087AD09F721F1D /* Pods_LineMemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LineMemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC60ABE6F7D8BB510CD4C907 /* libPods-LineMemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LineMemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8EC312CAD503279D8884058 /* Pods-LineMemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineMemoTests.release.xcconfig"; path = "Target Support Files/Pods-LineMemoTests/Pods-LineMemoTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,7 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB4C43291B94E7F9D109FBB0 /* Pods_LineMemo.framework in Frameworks */,
+				1EEBD94C205CAA0793EA6D67 /* libPods-LineMemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15562EFB98A5C20DADD89281 /* Pods_LineMemoTests.framework in Frameworks */,
+				CFF7FDC3771524EB4A5D6560 /* libPods-LineMemoTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +150,7 @@
 		43527EE223F2CF9600291561 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				43527EF023F2E94900291561 /* MemoTableView */,
 				43527EE923F2CFE700291561 /* MainVC.swift */,
 				43527EEA23F2CFE700291561 /* MainVC.xib */,
 			);
@@ -176,6 +181,38 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		43527EF023F2E94900291561 /* MemoTableView */ = {
+			isa = PBXGroup;
+			children = (
+				43527EF123F2E95C00291561 /* MemoCell */,
+			);
+			path = MemoTableView;
+			sourceTree = "<group>";
+		};
+		43527EF123F2E95C00291561 /* MemoCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MemoCell;
+			sourceTree = "<group>";
+		};
+		43527EF223F389AB00291561 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				43527EF323F389C400291561 /* DataStruct */,
+				43527EE123F2CF8E00291561 /* Main */,
+			);
+			path = Memo;
+			sourceTree = "<group>";
+		};
+		43527EF323F389C400291561 /* DataStruct */ = {
+			isa = PBXGroup;
+			children = (
+				43527EF423F389DC00291561 /* Memo.swift */,
+			);
+			path = DataStruct;
+			sourceTree = "<group>";
+		};
 		43C285EB23F157B2007D3714 = {
 			isa = PBXGroup;
 			children = (
@@ -201,7 +238,7 @@
 			children = (
 				43C2861923F158EA007D3714 /* Config */,
 				43C2862C23F15A4B007D3714 /* Splash */,
-				43527EE123F2CF8E00291561 /* Main */,
+				43527EF223F389AB00291561 /* Memo */,
 				43C285F723F157B3007D3714 /* AppDelegate.swift */,
 				43C285F923F157B3007D3714 /* SceneDelegate.swift */,
 				43C2860023F157B4007D3714 /* Assets.xcassets */,
@@ -230,6 +267,7 @@
 				43C2861A23F15921007D3714 /* BaseVC.swift */,
 				43C2862823F15A0B007D3714 /* IndicatorView.swift */,
 				43C2862A23F15A26007D3714 /* ColorPalette.swift */,
+				43527EF623F38A4100291561 /* RealmManager.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -277,8 +315,8 @@
 		D8034C72E67727105D34FB02 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C056C4C436087AD09F721F1D /* Pods_LineMemo.framework */,
-				5B41070183A41240F0506DD2 /* Pods_LineMemoTests.framework */,
+				474FF4FDBCD4134C99BEC725 /* libPods-LineMemo.a */,
+				BC60ABE6F7D8BB510CD4C907 /* libPods-LineMemoTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -439,11 +477,13 @@
 				43C285F823F157B3007D3714 /* AppDelegate.swift in Sources */,
 				43527EE623F2CFBC00291561 /* MainProtocol.swift in Sources */,
 				43C2862423F159C0007D3714 /* UIColor.swift in Sources */,
+				43527EF723F38A4100291561 /* RealmManager.swift in Sources */,
 				43527EEB23F2CFE700291561 /* MainVC.swift in Sources */,
 				43C2861B23F15921007D3714 /* BaseVC.swift in Sources */,
 				43C2862023F15980007D3714 /* String.swift in Sources */,
 				434D2B4023F2C50D00E1E0D1 /* SplashProtocol.swift in Sources */,
 				43C2862923F15A0B007D3714 /* IndicatorView.swift in Sources */,
+				43527EF523F389DC00291561 /* Memo.swift in Sources */,
 				43C2862B23F15A26007D3714 /* ColorPalette.swift in Sources */,
 				43C2861E23F1595F007D3714 /* UIViewController.swift in Sources */,
 				43C2862723F159EC007D3714 /* BaseVCProtocol.swift in Sources */,

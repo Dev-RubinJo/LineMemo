@@ -24,23 +24,30 @@ class SplashTests: XCTestCase {
         
         XCTAssertNotNil(vc)
     }
+//
+//    func testSplashVCActorIsNil() {
+//        let vc = SplashVC.viewRouter.makeSplashVC()
+//
+//        XCTAssertNotNil(vc.actor)
+//    }
+//
+//    func testSplashVCActorViewIsNil() {
+//        let vc = SplashVC.viewRouter.makeSplashVC()
+//
+//        XCTAssertNotNil(vc.actor?.view)
+//    }
+//
+    func testAfterSplashIsActorNil() {
+        let vc = SplashVC.viewRouter.makeSplashVC()
+        vc.actor?.didLoadSplash()
+        XCTAssertNil(vc.actor)
+    }
     
-    func testSplashVCActorIsNil() {
-        let vc = SplashVC.viewRouter.makeSplashVC()
-        
-        XCTAssertNotNil(vc.actor!)
-    }
-    func testSplashVCActorViewIsNil() {
-        let vc = SplashVC.viewRouter.makeSplashVC()
-        
-        XCTAssertNotNil(vc.actor?.view!)
-    }
-    
-    func testSplashVCPresentMain() {
-        let vc = SplashVC.viewRouter.makeSplashVC()
-        let content: String = vc.presentMainVC()
-        XCTAssertEqual(content, "Go to Main")
-    }
+//    func testSplashVCPresentMain() {
+//        let vc = SplashVC.viewRouter.makeSplashVC()
+//        let content: String = vc.presentMainVC()
+//        XCTAssertEqual(content, "Go to Main")
+//    }
 
     func testPerformanceExample() {
         // This is an example of a performance test case.

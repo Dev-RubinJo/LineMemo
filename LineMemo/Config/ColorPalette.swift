@@ -25,4 +25,6 @@ struct ColorPalette {
     // rgb 237 237 237
     static let borderSoft: UInt = 0xededed
     
+    /// SplashVC LightMode Background Color
+    static let splashBGColor: UInt = 0x6acc3c
 }

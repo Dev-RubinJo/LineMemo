@@ -17,7 +17,7 @@ protocol SplashVCRouterDelegate: class {
     
     var window: UIWindow? { get }
     
-    func makeSplashVC() -> SplashVC
+    static func makeSplashVC() -> SplashVC
     
     func presentMainVC()
 }

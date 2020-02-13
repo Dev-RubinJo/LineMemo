@@ -53,19 +53,18 @@ extension SplashVC: SplashVCRouterDelegate {
         }
     }
     
-    func makeSplashVC() -> SplashVC {
+    static func makeSplashVC() -> SplashVC {
         let vc = SplashVC()
         let actor = SplashActor.shared
-//        let actor = SplashActor()
         
         vc.actor = actor
-        actor?.view = vc
+        actor.view = vc
         return vc
     }
     
     func presentMainVC() {
-        SplashActor.shared = nil
-        self.window?.rootViewController = MainVC.viewRouter.makeMainVC()
+        let mainVC = UINavigationController.init(rootViewController: MainVC.viewRouter.makeMainVC())
+        self.window?.rootViewController = mainVC
         self.window?.makeKeyAndVisible()
     }
 }

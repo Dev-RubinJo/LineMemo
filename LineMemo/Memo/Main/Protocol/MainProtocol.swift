@@ -14,9 +14,15 @@ protocol MainVCDelegate: BaseVCProtocol {
 protocol MainVCRouterDelegate: class {
     
     func makeMainVC() -> MainVC
+    
+    func presentMemoDetailVC()
 }
 
 protocol MainActorDelegate: class {
     
     var view: MainVCRouterDelegate? { get set }
+    
+    func didLoadMainVC()
+    
+    func didTapAddButton()
 }

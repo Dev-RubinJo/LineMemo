@@ -13,5 +13,12 @@ class MainActor: MainActorDelegate {
     
     weak var view: MainVCRouterDelegate?
     
+    func didLoadMainVC() {
+        MemoModel.shared
+        print(MemoModel.shared.memoList.count)
+    }
     
+    func didTapAddButton() {
+        self.view?.presentMemoDetailVC()
+    }
 }

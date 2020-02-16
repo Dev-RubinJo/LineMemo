@@ -7,6 +7,7 @@
 //
 
 import Foundation
+// 메모 데이터 저장을 위해 CoreData 대신 Realm 모바일 DB를 사용
 import RealmSwift
 
 class RealmManager {

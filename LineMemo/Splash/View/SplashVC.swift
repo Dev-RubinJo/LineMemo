@@ -13,17 +13,14 @@ class SplashVC: BaseVC, SplashVCDelegate {
     @IBOutlet weak var splashLabel: UILabel!
     
     private let _window: UIWindow = UIApplication.shared.windows.first ?? UIApplication.shared.keyWindow ?? UIWindow.init(frame: UIScreen.main.bounds)
-    static let viewRouter: SplashVCRouterDelegate = SplashVC()
     weak var actor: SplashActorDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initVC()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.actor?.didLoadSplash()
+        self.delay(0.6) { [weak self] in
+            self?.actor?.didLoadSplash()
+        }
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -47,7 +44,7 @@ class SplashVC: BaseVC, SplashVCDelegate {
 }
 extension SplashVC: SplashVCRouterDelegate {
     
-    weak var window: UIWindow? {
+    unowned var window: UIWindow {
         get {
             self._window
         }
@@ -62,9 +59,18 @@ extension SplashVC: SplashVCRouterDelegate {
         return vc
     }
     
+    func presentAuthorizationVC() {
+        self.window.rootViewController = AuthorizationVC.makeAuthorizationVC()
+        self.window.makeKeyAndVisible()
+        
+        UIView.transition(with: self.window, duration: 0.1, options: .transitionCrossDissolve, animations: nil, completion: nil)
+    }
+    
     func presentMainVC() {
-        let mainVC = UINavigationController.init(rootViewController: MainVC.viewRouter.makeMainVC())
-        self.window?.rootViewController = mainVC
-        self.window?.makeKeyAndVisible()
+        let mainVC = UINavigationController.init(rootViewController: MainVC.makeMainVC())
+        self.window.rootViewController = mainVC
+        self.window.makeKeyAndVisible()
+        
+        UIView.transition(with: self.window, duration: 0.2, options: .transitionCrossDissolve, animations: nil, completion: nil)
     }
 }

@@ -13,16 +13,24 @@ protocol MainVCDelegate: BaseVCProtocol {
 
 protocol MainVCRouterDelegate: class {
     
-    func makeMainVC() -> MainVC
+    static func makeMainVC() -> MainVC
     
-    func presentMemoDetailVC()
+    func presentMemoDetailVCToAdd()
+    
+    func presentMemoDetailVCToEdit(targetMemo memo: Memo)
 }
 
 protocol MainActorDelegate: class {
     
     var view: MainVCRouterDelegate? { get set }
     
+    var memoListData: [Memo] { get }
+    
     func didLoadMainVC()
     
     func didTapAddButton()
+    
+    func didTapMemoListTableViewCell(index: Int)
+    
+    func deleteMemoData(_ memo: Memo, _ index: Int)
 }

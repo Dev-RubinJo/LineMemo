@@ -13,12 +13,26 @@ class MainActor: MainActorDelegate {
     
     weak var view: MainVCRouterDelegate?
     
+    var memoListData: [Memo] {
+        get {
+            return MemoModel.shared.memoList
+        }
+    }
+    
     func didLoadMainVC() {
-        MemoModel.shared
-        print(MemoModel.shared.memoList.count)
+        
     }
     
     func didTapAddButton() {
-        self.view?.presentMemoDetailVC()
+        self.view?.presentMemoDetailVCToAdd()
+    }
+    
+    func didTapMemoListTableViewCell(index: Int) {
+        let memo = self.memoListData[index]
+        self.view?.presentMemoDetailVCToEdit(targetMemo: memo)
+    }
+    
+    func deleteMemoData(_ memo: Memo, _ index: Int) {
+        MemoModel.shared.deleteMemo(targetMemo: memo, index: index)
     }
 }

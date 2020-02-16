@@ -10,15 +10,62 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" restorationIdentifier="MemoCell" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="MemoCell" customModule="LineMemo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="MemoCell" selectionStyle="default" indentationWidth="10" rowHeight="70" id="KGk-i7-Jjw" customClass="MemoCell" customModule="LineMemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                 <autoresizingMask key="autoresizingMask"/>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EvK-O8-pjJ">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="70"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfo-rB-YvI">
+                                <rect key="frame" x="25" y="10" width="50.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w3P-Cf-wkn">
+                                <rect key="frame" x="25" y="47" width="215" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="w3P-Cf-wkn" secondAttribute="bottom" constant="5" id="8ap-me-ZgX"/>
+                            <constraint firstItem="w3P-Cf-wkn" firstAttribute="leading" secondItem="Qfo-rB-YvI" secondAttribute="leading" id="RWV-eZ-vuw"/>
+                            <constraint firstItem="Qfo-rB-YvI" firstAttribute="leading" secondItem="EvK-O8-pjJ" secondAttribute="leading" constant="25" id="bNu-st-6eG"/>
+                            <constraint firstAttribute="trailing" secondItem="w3P-Cf-wkn" secondAttribute="trailing" constant="10" id="vyH-NA-XYi"/>
+                            <constraint firstItem="Qfo-rB-YvI" firstAttribute="top" secondItem="EvK-O8-pjJ" secondAttribute="top" constant="10" id="zHZ-eJ-FDT"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="woY-7v-9l2">
+                        <rect key="frame" x="250" y="0.0" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="woY-7v-9l2" secondAttribute="height" multiplier="1:1" id="Fdk-Iw-ElR"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                <constraints>
+                    <constraint firstItem="woY-7v-9l2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8Rv-j2-ZvH"/>
+                    <constraint firstAttribute="trailing" secondItem="woY-7v-9l2" secondAttribute="trailing" id="BRz-rv-flD"/>
+                    <constraint firstAttribute="bottom" secondItem="woY-7v-9l2" secondAttribute="bottom" id="QCd-pq-WbG"/>
+                    <constraint firstItem="EvK-O8-pjJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="dHt-ni-WKn"/>
+                    <constraint firstItem="woY-7v-9l2" firstAttribute="leading" secondItem="EvK-O8-pjJ" secondAttribute="trailing" id="eQy-CS-1L4"/>
+                    <constraint firstItem="EvK-O8-pjJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pZW-5z-HKv"/>
+                    <constraint firstAttribute="bottom" secondItem="EvK-O8-pjJ" secondAttribute="bottom" id="qh8-IX-N2E"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="memoCellContentLabel" destination="w3P-Cf-wkn" id="p3m-I7-A7B"/>
+                <outlet property="memoCellImageView" destination="woY-7v-9l2" id="TOf-as-Jhi"/>
+                <outlet property="memoCellTitleLabel" destination="Qfo-rB-YvI" id="k8w-ic-1uA"/>
+            </connections>
             <point key="canvasLocation" x="141" y="154"/>
         </tableViewCell>
     </objects>

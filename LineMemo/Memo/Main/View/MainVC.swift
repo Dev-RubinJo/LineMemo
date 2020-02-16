@@ -14,8 +14,6 @@ class MainVC: BaseVC, MainVCDelegate {
     @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var memoListTableView: UITableView!
     
-    static let viewRouter: MainVCRouterDelegate = MainVC()
-    
     weak var actor: MainActorDelegate?
     
     override func viewDidLoad() {
@@ -23,9 +21,10 @@ class MainVC: BaseVC, MainVCDelegate {
         self.initVC()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        self.memoListTableView.reloadData()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -56,7 +55,8 @@ class MainVC: BaseVC, MainVCDelegate {
     }
 }
 extension MainVC: MainVCRouterDelegate {
-    func makeMainVC() -> MainVC {
+    
+    static func makeMainVC() -> MainVC {
         let vc = MainVC()
         let actor = MainActor.shared
         
@@ -65,8 +65,15 @@ extension MainVC: MainVCRouterDelegate {
         return vc
     }
     
-    func presentMemoDetailVC() {
-        let memoDetailVC = MemoDetailVC.viewRouter.makeMemoDetailVC()
+    func presentMemoDetailVCToAdd() {
+        let memoDetailVC = MemoDetailVC.makeMemoDetailVC()
+        self.navigationController?.pushViewController(memoDetailVC, animated: true)
+    }
+    
+    func presentMemoDetailVCToEdit(targetMemo memo: Memo) {
+        let memoDetailVC = MemoDetailVC.makeMemoDetailVC()
+        memoDetailVC.memoData = memo
+        
         self.navigationController?.pushViewController(memoDetailVC, animated: true)
     }
 }

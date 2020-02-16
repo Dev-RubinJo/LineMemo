@@ -33,6 +33,26 @@
 		43C2862723F159EC007D3714 /* BaseVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862623F159EC007D3714 /* BaseVCProtocol.swift */; };
 		43C2862923F15A0B007D3714 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862823F15A0B007D3714 /* IndicatorView.swift */; };
 		43C2862B23F15A26007D3714 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862A23F15A26007D3714 /* ColorPalette.swift */; };
+		43D53E2623F7028D005DFC4A /* MemoDetailVC+UITextView+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E2523F7028D005DFC4A /* MemoDetailVC+UITextView+UITextField.swift */; };
+		43D53E2823F702C7005DFC4A /* MemoDetailVC+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E2723F702C7005DFC4A /* MemoDetailVC+UICollectionView.swift */; };
+		43D53E2B23F78957005DFC4A /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E2923F78957005DFC4A /* ImageCell.swift */; };
+		43D53E2C23F78957005DFC4A /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D53E2A23F78957005DFC4A /* ImageCell.xib */; };
+		43D53E3223F829E3005DFC4A /* AuthorizationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E3123F829E3005DFC4A /* AuthorizationProtocol.swift */; };
+		43D53E3423F82A8E005DFC4A /* AuthorizationActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E3323F82A8E005DFC4A /* AuthorizationActor.swift */; };
+		43D53E3723F82E8F005DFC4A /* AuthorizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E3523F82E8F005DFC4A /* AuthorizationVC.swift */; };
+		43D53E3823F82E8F005DFC4A /* AuthorizationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D53E3623F82E8F005DFC4A /* AuthorizationVC.xib */; };
+		43D53E3A23F90ACF005DFC4A /* MemoDetailVC+UIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E3923F90ACF005DFC4A /* MemoDetailVC+UIImagePickerController.swift */; };
+		43F81DF623F453DC005081BE /* MainVC+SetUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81DF523F453DC005081BE /* MainVC+SetUI.swift */; };
+		43F81DF923F4588D005081BE /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81DF823F4588D005081BE /* MemoModel.swift */; };
+		43F81E0023F5584F005081BE /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81DFE23F5584F005081BE /* MemoCell.swift */; };
+		43F81E0123F5584F005081BE /* MemoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F81DFF23F5584F005081BE /* MemoCell.xib */; };
+		43F81E0323F558C4005081BE /* MainVC+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81E0223F558C4005081BE /* MainVC+TableView.swift */; };
+		43F81E0623F57191005081BE /* MemoDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81E0423F57191005081BE /* MemoDetailVC.swift */; };
+		43F81E0723F57191005081BE /* MemoDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F81E0523F57191005081BE /* MemoDetailVC.xib */; };
+		43F81E0C23F57543005081BE /* MemoDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81E0B23F57543005081BE /* MemoDetailProtocol.swift */; };
+		43F81E0E23F57640005081BE /* MemoDetailActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81E0D23F57640005081BE /* MemoDetailActor.swift */; };
+		43F81E1023F57AFD005081BE /* MemoDetailVC+SetUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81E0F23F57AFD005081BE /* MemoDetailVC+SetUI.swift */; };
+		43F81E1223F67BDF005081BE /* LineMemoFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81E1123F67BDF005081BE /* LineMemoFileManager.swift */; };
 		CFF7FDC3771524EB4A5D6560 /* libPods-LineMemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60ABE6F7D8BB510CD4C907 /* libPods-LineMemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +96,26 @@
 		43C2862623F159EC007D3714 /* BaseVCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCProtocol.swift; sourceTree = "<group>"; };
 		43C2862823F15A0B007D3714 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		43C2862A23F15A26007D3714 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		43D53E2523F7028D005DFC4A /* MemoDetailVC+UITextView+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoDetailVC+UITextView+UITextField.swift"; sourceTree = "<group>"; };
+		43D53E2723F702C7005DFC4A /* MemoDetailVC+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoDetailVC+UICollectionView.swift"; sourceTree = "<group>"; };
+		43D53E2923F78957005DFC4A /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		43D53E2A23F78957005DFC4A /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		43D53E3123F829E3005DFC4A /* AuthorizationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationProtocol.swift; sourceTree = "<group>"; };
+		43D53E3323F82A8E005DFC4A /* AuthorizationActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationActor.swift; sourceTree = "<group>"; };
+		43D53E3523F82E8F005DFC4A /* AuthorizationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationVC.swift; sourceTree = "<group>"; };
+		43D53E3623F82E8F005DFC4A /* AuthorizationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationVC.xib; sourceTree = "<group>"; };
+		43D53E3923F90ACF005DFC4A /* MemoDetailVC+UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoDetailVC+UIImagePickerController.swift"; sourceTree = "<group>"; };
+		43F81DF523F453DC005081BE /* MainVC+SetUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+SetUI.swift"; sourceTree = "<group>"; };
+		43F81DF823F4588D005081BE /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
+		43F81DFE23F5584F005081BE /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
+		43F81DFF23F5584F005081BE /* MemoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoCell.xib; sourceTree = "<group>"; };
+		43F81E0223F558C4005081BE /* MainVC+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+TableView.swift"; sourceTree = "<group>"; };
+		43F81E0423F57191005081BE /* MemoDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailVC.swift; sourceTree = "<group>"; };
+		43F81E0523F57191005081BE /* MemoDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemoDetailVC.xib; sourceTree = "<group>"; };
+		43F81E0B23F57543005081BE /* MemoDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailProtocol.swift; sourceTree = "<group>"; };
+		43F81E0D23F57640005081BE /* MemoDetailActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailActor.swift; sourceTree = "<group>"; };
+		43F81E0F23F57AFD005081BE /* MemoDetailVC+SetUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoDetailVC+SetUI.swift"; sourceTree = "<group>"; };
+		43F81E1123F67BDF005081BE /* LineMemoFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineMemoFileManager.swift; sourceTree = "<group>"; };
 		474FF4FDBCD4134C99BEC725 /* libPods-LineMemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LineMemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F4C051CDC667D3AC01D46F /* Pods-LineMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineMemo.release.xcconfig"; path = "Target Support Files/Pods-LineMemo/Pods-LineMemo.release.xcconfig"; sourceTree = "<group>"; };
 		989DE2FE8D22EF88A6C4B36F /* Pods-LineMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineMemo.debug.xcconfig"; path = "Target Support Files/Pods-LineMemo/Pods-LineMemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +177,14 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
+		43518F2C23F3C75000FE9747 /* DataStruct */ = {
+			isa = PBXGroup;
+			children = (
+				43527EF423F389DC00291561 /* Memo.swift */,
+			);
+			path = DataStruct;
+			sourceTree = "<group>";
+		};
 		43527EE123F2CF8E00291561 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +198,7 @@
 		43527EE223F2CF9600291561 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				43F81DF423F453C2005081BE /* Extension */,
 				43527EF023F2E94900291561 /* MemoTableView */,
 				43527EE923F2CFE700291561 /* MainVC.swift */,
 				43527EEA23F2CFE700291561 /* MainVC.xib */,
@@ -192,6 +241,8 @@
 		43527EF123F2E95C00291561 /* MemoCell */ = {
 			isa = PBXGroup;
 			children = (
+				43F81DFE23F5584F005081BE /* MemoCell.swift */,
+				43F81DFF23F5584F005081BE /* MemoCell.xib */,
 			);
 			path = MemoCell;
 			sourceTree = "<group>";
@@ -199,18 +250,20 @@
 		43527EF223F389AB00291561 /* Memo */ = {
 			isa = PBXGroup;
 			children = (
-				43527EF323F389C400291561 /* DataStruct */,
+				43527EF323F389C400291561 /* Data */,
 				43527EE123F2CF8E00291561 /* Main */,
+				43F81DFA23F460E8005081BE /* MemoDetail */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
 		};
-		43527EF323F389C400291561 /* DataStruct */ = {
+		43527EF323F389C400291561 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				43527EF423F389DC00291561 /* Memo.swift */,
+				43F81DF723F4587C005081BE /* DataModel */,
+				43518F2C23F3C75000FE9747 /* DataStruct */,
 			);
-			path = DataStruct;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		43C285EB23F157B2007D3714 = {
@@ -238,6 +291,7 @@
 			children = (
 				43C2861923F158EA007D3714 /* Config */,
 				43C2862C23F15A4B007D3714 /* Splash */,
+				43D53E2D23F82974005DFC4A /* Authorization */,
 				43527EF223F389AB00291561 /* Memo */,
 				43C285F723F157B3007D3714 /* AppDelegate.swift */,
 				43C285F923F157B3007D3714 /* SceneDelegate.swift */,
@@ -268,6 +322,7 @@
 				43C2862823F15A0B007D3714 /* IndicatorView.swift */,
 				43C2862A23F15A26007D3714 /* ColorPalette.swift */,
 				43527EF623F38A4100291561 /* RealmManager.swift */,
+				43F81E1123F67BDF005081BE /* LineMemoFileManager.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -299,6 +354,123 @@
 				434D2B3B23F2C4ED00E1E0D1 /* Protocol */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		43D53E2D23F82974005DFC4A /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				43D53E3023F8298D005DFC4A /* View */,
+				43D53E2F23F8298B005DFC4A /* Actor */,
+				43D53E2E23F82989005DFC4A /* Protocol */,
+			);
+			path = Authorization;
+			sourceTree = "<group>";
+		};
+		43D53E2E23F82989005DFC4A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				43D53E3123F829E3005DFC4A /* AuthorizationProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		43D53E2F23F8298B005DFC4A /* Actor */ = {
+			isa = PBXGroup;
+			children = (
+				43D53E3323F82A8E005DFC4A /* AuthorizationActor.swift */,
+			);
+			path = Actor;
+			sourceTree = "<group>";
+		};
+		43D53E3023F8298D005DFC4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43D53E3523F82E8F005DFC4A /* AuthorizationVC.swift */,
+				43D53E3623F82E8F005DFC4A /* AuthorizationVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		43F81DF423F453C2005081BE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				43F81DF523F453DC005081BE /* MainVC+SetUI.swift */,
+				43F81E0223F558C4005081BE /* MainVC+TableView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		43F81DF723F4587C005081BE /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				43F81DF823F4588D005081BE /* MemoModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		43F81DFA23F460E8005081BE /* MemoDetail */ = {
+			isa = PBXGroup;
+			children = (
+				43F81DFD23F461E3005081BE /* View */,
+				43F81DFC23F461E2005081BE /* Actor */,
+				43F81DFB23F461E0005081BE /* Protocol */,
+			);
+			path = MemoDetail;
+			sourceTree = "<group>";
+		};
+		43F81DFB23F461E0005081BE /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				43F81E0B23F57543005081BE /* MemoDetailProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		43F81DFC23F461E2005081BE /* Actor */ = {
+			isa = PBXGroup;
+			children = (
+				43F81E0D23F57640005081BE /* MemoDetailActor.swift */,
+			);
+			path = Actor;
+			sourceTree = "<group>";
+		};
+		43F81DFD23F461E3005081BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43F81E0A23F5751F005081BE /* Extension */,
+				43F81E0823F5750A005081BE /* ImageCollectionView */,
+				43F81E0423F57191005081BE /* MemoDetailVC.swift */,
+				43F81E0523F57191005081BE /* MemoDetailVC.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		43F81E0823F5750A005081BE /* ImageCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				43F81E0923F57517005081BE /* ImageCell */,
+			);
+			path = ImageCollectionView;
+			sourceTree = "<group>";
+		};
+		43F81E0923F57517005081BE /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				43D53E2923F78957005DFC4A /* ImageCell.swift */,
+				43D53E2A23F78957005DFC4A /* ImageCell.xib */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		43F81E0A23F5751F005081BE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				43F81E0F23F57AFD005081BE /* MemoDetailVC+SetUI.swift */,
+				43D53E2523F7028D005DFC4A /* MemoDetailVC+UITextView+UITextField.swift */,
+				43D53E2723F702C7005DFC4A /* MemoDetailVC+UICollectionView.swift */,
+				43D53E3923F90ACF005DFC4A /* MemoDetailVC+UIImagePickerController.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		7E4DA4910F781CD32966CDBC /* Pods */ = {
@@ -405,8 +577,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				43C2860423F157B4007D3714 /* LaunchScreen.storyboard in Resources */,
+				43F81E0723F57191005081BE /* MemoDetailVC.xib in Resources */,
+				43D53E2C23F78957005DFC4A /* ImageCell.xib in Resources */,
 				43527EEC23F2CFE700291561 /* MainVC.xib in Resources */,
 				434D2B4A23F2C54200E1E0D1 /* SplashVC.xib in Resources */,
+				43F81E0123F5584F005081BE /* MemoCell.xib in Resources */,
+				43D53E3823F82E8F005DFC4A /* AuthorizationVC.xib in Resources */,
 				43C2860123F157B4007D3714 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,24 +648,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D53E3223F829E3005DFC4A /* AuthorizationProtocol.swift in Sources */,
 				43527EE823F2CFD400291561 /* MainActor.swift in Sources */,
+				43F81E0E23F57640005081BE /* MemoDetailActor.swift in Sources */,
 				434D2B4623F2C53300E1E0D1 /* SplashActor.swift in Sources */,
 				43C285F823F157B3007D3714 /* AppDelegate.swift in Sources */,
+				43D53E3723F82E8F005DFC4A /* AuthorizationVC.swift in Sources */,
+				43D53E2823F702C7005DFC4A /* MemoDetailVC+UICollectionView.swift in Sources */,
 				43527EE623F2CFBC00291561 /* MainProtocol.swift in Sources */,
 				43C2862423F159C0007D3714 /* UIColor.swift in Sources */,
+				43F81DF923F4588D005081BE /* MemoModel.swift in Sources */,
+				43F81E1223F67BDF005081BE /* LineMemoFileManager.swift in Sources */,
+				43F81E0C23F57543005081BE /* MemoDetailProtocol.swift in Sources */,
 				43527EF723F38A4100291561 /* RealmManager.swift in Sources */,
+				43D53E3A23F90ACF005DFC4A /* MemoDetailVC+UIImagePickerController.swift in Sources */,
 				43527EEB23F2CFE700291561 /* MainVC.swift in Sources */,
 				43C2861B23F15921007D3714 /* BaseVC.swift in Sources */,
+				43F81E0323F558C4005081BE /* MainVC+TableView.swift in Sources */,
 				43C2862023F15980007D3714 /* String.swift in Sources */,
 				434D2B4023F2C50D00E1E0D1 /* SplashProtocol.swift in Sources */,
 				43C2862923F15A0B007D3714 /* IndicatorView.swift in Sources */,
 				43527EF523F389DC00291561 /* Memo.swift in Sources */,
+				43F81DF623F453DC005081BE /* MainVC+SetUI.swift in Sources */,
+				43F81E0023F5584F005081BE /* MemoCell.swift in Sources */,
 				43C2862B23F15A26007D3714 /* ColorPalette.swift in Sources */,
 				43C2861E23F1595F007D3714 /* UIViewController.swift in Sources */,
+				43F81E0623F57191005081BE /* MemoDetailVC.swift in Sources */,
 				43C2862723F159EC007D3714 /* BaseVCProtocol.swift in Sources */,
 				43C285FA23F157B3007D3714 /* SceneDelegate.swift in Sources */,
 				434D2B4923F2C54200E1E0D1 /* SplashVC.swift in Sources */,
+				43D53E2623F7028D005DFC4A /* MemoDetailVC+UITextView+UITextField.swift in Sources */,
+				43F81E1023F57AFD005081BE /* MemoDetailVC+SetUI.swift in Sources */,
+				43D53E3423F82A8E005DFC4A /* AuthorizationActor.swift in Sources */,
 				43C2862223F159AB007D3714 /* UIButton.swift in Sources */,
+				43D53E2B23F78957005DFC4A /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

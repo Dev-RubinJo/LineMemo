@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol BaseVCProtocol {
+@objc protocol BaseVCProtocol {
     
     func initVC()
     
-    func setDarkModeUI()
+    @objc optional func setDarkModeUI()
 }

@@ -27,4 +27,13 @@ struct ColorPalette {
     
     /// SplashVC LightMode Background Color
     static let splashBGColor: UInt = 0x6acc3c
+    
+    /// MemoDetailVC BorderView Color
+    static let borderViewGray: UInt = 0xe8e8e8
+    
+    // MemoDetailVC Placeholder light mode Color
+    static let lightModePlaceholderColor: UInt = 0xCBCBCD
+    
+    // MemoDetailVC Placeholder dark mode Color
+    static let darkModePlaceholderColor: UInt = 0x515154
 }

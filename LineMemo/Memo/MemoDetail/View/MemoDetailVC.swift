@@ -18,6 +18,16 @@ class MemoDetailVC: BaseVC, MemoDetailVCProtocol {
     
     // Memo를 띄워주기 위해 MemoData 선언
     var memoData: Memo?
+    var memoIndex: Int?
+    // 이미지 인덱스를 저장하기 위한 imageIndex 선언
+    var imageIndex: Int = 0 {
+        didSet {
+            if self.imageIndex >= 1 {
+                guard let memo = self.memoData else { return }
+                self.actor?.presentDeleteImageAlert(toVC: self, memo: memo, imageIndex: self.imageIndex)
+            }
+        }
+    }
     // 이미지 변수를 임시 저장하기 위한 imageList 선언
     var imageList: [UIImage] = []
     // 새 이미지 변수를 위한 tempImageList 선언
@@ -81,5 +91,16 @@ extension MemoDetailVC: MemoDetailVCRouterProtocol {
         vc.actor = actor
         actor.view = vc        
         return vc
+    }
+    
+    func presentImageDetailVC(fromVC vc: MemoDetailVC, imageIndex: Int) {
+        let imageDetailVCStoryboard = UIStoryboard(name: "ImageDetailVC", bundle: nil)
+        guard let imageDetailVC = imageDetailVCStoryboard.instantiateViewController(withIdentifier: "ImageDetailVC") as? ImageDetailVC else { return }
+        imageDetailVC.modalPresentationStyle = .fullScreen
+        for image in self.imageList {
+            imageDetailVC.imageList.append(image)
+        }
+        imageDetailVC.imageIndex = imageIndex - 1
+        self.present(imageDetailVC, animated: true, completion: nil)
     }
 }

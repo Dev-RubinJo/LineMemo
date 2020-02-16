@@ -13,9 +13,14 @@ extension MemoDetailVC {
         let imageCellNib = UINib.init(nibName: "ImageCell", bundle: nil)
         self.memoDetailImageCollectionView.register(imageCellNib, forCellWithReuseIdentifier: "ImageCell")
         
+        let longPressGestureForDelete = UILongPressGestureRecognizer(target: self, action: #selector(self.longPressGestureForDeleteImage(_:)))
+        longPressGestureForDelete.minimumPressDuration = 0.5
+        self.memoDetailImageCollectionView.addGestureRecognizer(longPressGestureForDelete)
+        
         if let memo = self.memoData {
             let editButton = UIBarButtonItem(title: "edit", style: .plain, target: self, action: #selector(self.pressEditButtonItem(_:)))
-            self.navigationItem.rightBarButtonItem = editButton
+            let deleteButton = UIBarButtonItem(title: "del", style: .plain, target: self, action: #selector(self.pressDeleteButton(_:)))
+            self.navigationItem.rightBarButtonItems = [deleteButton, editButton]
             self.memoDetailTitleTextField.text = memo.title
             self.memoDetailContentTextView.text = memo.content
         } else {
@@ -28,9 +33,22 @@ extension MemoDetailVC {
         }
     }
     
+    // MARK: long press Gesture
+    @objc func longPressGestureForDeleteImage(_ gesture: UIGestureRecognizer) {
+        switch gesture.state {
+        case .began:
+            guard let selectedIndexPath = self.memoDetailImageCollectionView.indexPathForItem(at: gesture.location(in: self.memoDetailImageCollectionView)) else { return }
+            
+            self.imageIndex = selectedIndexPath.item
+        case .ended:
+            fallthrough
+        default:
+            self.memoDetailImageCollectionView.reloadData()
+        }
+    }
+    
     @objc func pressAddButtonItem(_ sender: UIBarButtonItem) {
         let id = UserDefaults.standard.integer(forKey: "memoIdNumber")
-        print(id)
         guard let title = self.memoDetailTitleTextField.text else {
             return
         }
@@ -42,7 +60,7 @@ extension MemoDetailVC {
         UserDefaults.standard.set(id + 1, forKey: "memoIdNumber")
         self.actor?.didTapAddButtonItem(memo: memo)
         for image in self.tempImageList {
-            guard let imageData = image.jpegData(compressionQuality: 0.3) else { 
+            guard let imageData = image.jpegData(compressionQuality: 0.3) else {
                 return
             }
             self.actor?.appendImageToMemo(memo: memo, image: imageData)
@@ -63,6 +81,10 @@ extension MemoDetailVC {
         let content = self.memoDetailContentTextView.text!
         self.actor?.didTapEditButtonItem(memo: self.memoData!, title: title, content: content)
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func pressDeleteButton(_ sender: UIBarButtonItem) {
+        self.actor?.presentDeleteMemoAlert(toVC: self)
     }
     
     /// 사진 불러올 때의 액션시트 띄우기 함수

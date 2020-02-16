@@ -17,7 +17,7 @@ protocol MainVCRouterDelegate: class {
     
     func presentMemoDetailVCToAdd()
     
-    func presentMemoDetailVCToEdit(targetMemo memo: Memo)
+    func presentMemoDetailVCToEdit(targetMemo memo: Memo, index: Int)
 }
 
 protocol MainActorDelegate: class {

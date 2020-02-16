@@ -42,6 +42,10 @@
 		43D53E3723F82E8F005DFC4A /* AuthorizationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E3523F82E8F005DFC4A /* AuthorizationVC.swift */; };
 		43D53E3823F82E8F005DFC4A /* AuthorizationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43D53E3623F82E8F005DFC4A /* AuthorizationVC.xib */; };
 		43D53E3A23F90ACF005DFC4A /* MemoDetailVC+UIImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E3923F90ACF005DFC4A /* MemoDetailVC+UIImagePickerController.swift */; };
+		43D53E3F23F96305005DFC4A /* ImageDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E3D23F96305005DFC4A /* ImageDetailVC.swift */; };
+		43D53E4223F96541005DFC4A /* ImageDetailVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43D53E4123F96541005DFC4A /* ImageDetailVC.storyboard */; };
+		43D53E4523F96C70005DFC4A /* ImageContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E4423F96C70005DFC4A /* ImageContainerVC.swift */; };
+		43D53E4723F971D2005DFC4A /* PagingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E4623F971D2005DFC4A /* PagingVC.swift */; };
 		43F81DF623F453DC005081BE /* MainVC+SetUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81DF523F453DC005081BE /* MainVC+SetUI.swift */; };
 		43F81DF923F4588D005081BE /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81DF823F4588D005081BE /* MemoModel.swift */; };
 		43F81E0023F5584F005081BE /* MemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81DFE23F5584F005081BE /* MemoCell.swift */; };
@@ -105,6 +109,10 @@
 		43D53E3523F82E8F005DFC4A /* AuthorizationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationVC.swift; sourceTree = "<group>"; };
 		43D53E3623F82E8F005DFC4A /* AuthorizationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthorizationVC.xib; sourceTree = "<group>"; };
 		43D53E3923F90ACF005DFC4A /* MemoDetailVC+UIImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoDetailVC+UIImagePickerController.swift"; sourceTree = "<group>"; };
+		43D53E3D23F96305005DFC4A /* ImageDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDetailVC.swift; sourceTree = "<group>"; };
+		43D53E4123F96541005DFC4A /* ImageDetailVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageDetailVC.storyboard; sourceTree = "<group>"; };
+		43D53E4423F96C70005DFC4A /* ImageContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageContainerVC.swift; sourceTree = "<group>"; };
+		43D53E4623F971D2005DFC4A /* PagingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingVC.swift; sourceTree = "<group>"; };
 		43F81DF523F453DC005081BE /* MainVC+SetUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainVC+SetUI.swift"; sourceTree = "<group>"; };
 		43F81DF823F4588D005081BE /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
 		43F81DFE23F5584F005081BE /* MemoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoCell.swift; sourceTree = "<group>"; };
@@ -293,6 +301,7 @@
 				43C2862C23F15A4B007D3714 /* Splash */,
 				43D53E2D23F82974005DFC4A /* Authorization */,
 				43527EF223F389AB00291561 /* Memo */,
+				43D53E3B23F96299005DFC4A /* ImageDetail */,
 				43C285F723F157B3007D3714 /* AppDelegate.swift */,
 				43C285F923F157B3007D3714 /* SceneDelegate.swift */,
 				43C2860023F157B4007D3714 /* Assets.xcassets */,
@@ -389,6 +398,33 @@
 				43D53E3623F82E8F005DFC4A /* AuthorizationVC.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		43D53E3B23F96299005DFC4A /* ImageDetail */ = {
+			isa = PBXGroup;
+			children = (
+				43D53E3C23F962AF005DFC4A /* View */,
+			);
+			path = ImageDetail;
+			sourceTree = "<group>";
+		};
+		43D53E3C23F962AF005DFC4A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				43D53E4123F96541005DFC4A /* ImageDetailVC.storyboard */,
+				43D53E3D23F96305005DFC4A /* ImageDetailVC.swift */,
+				43D53E4623F971D2005DFC4A /* PagingVC.swift */,
+				43D53E4323F96C3D005DFC4A /* ImageContainerView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		43D53E4323F96C3D005DFC4A /* ImageContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				43D53E4423F96C70005DFC4A /* ImageContainerVC.swift */,
+			);
+			path = ImageContainerView;
 			sourceTree = "<group>";
 		};
 		43F81DF423F453C2005081BE /* Extension */ = {
@@ -576,6 +612,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43D53E4223F96541005DFC4A /* ImageDetailVC.storyboard in Resources */,
 				43C2860423F157B4007D3714 /* LaunchScreen.storyboard in Resources */,
 				43F81E0723F57191005081BE /* MemoDetailVC.xib in Resources */,
 				43D53E2C23F78957005DFC4A /* ImageCell.xib in Resources */,
@@ -650,6 +687,7 @@
 			files = (
 				43D53E3223F829E3005DFC4A /* AuthorizationProtocol.swift in Sources */,
 				43527EE823F2CFD400291561 /* MainActor.swift in Sources */,
+				43D53E3F23F96305005DFC4A /* ImageDetailVC.swift in Sources */,
 				43F81E0E23F57640005081BE /* MemoDetailActor.swift in Sources */,
 				434D2B4623F2C53300E1E0D1 /* SplashActor.swift in Sources */,
 				43C285F823F157B3007D3714 /* AppDelegate.swift in Sources */,
@@ -675,10 +713,12 @@
 				43C2861E23F1595F007D3714 /* UIViewController.swift in Sources */,
 				43F81E0623F57191005081BE /* MemoDetailVC.swift in Sources */,
 				43C2862723F159EC007D3714 /* BaseVCProtocol.swift in Sources */,
+				43D53E4523F96C70005DFC4A /* ImageContainerVC.swift in Sources */,
 				43C285FA23F157B3007D3714 /* SceneDelegate.swift in Sources */,
 				434D2B4923F2C54200E1E0D1 /* SplashVC.swift in Sources */,
 				43D53E2623F7028D005DFC4A /* MemoDetailVC+UITextView+UITextField.swift in Sources */,
 				43F81E1023F57AFD005081BE /* MemoDetailVC+SetUI.swift in Sources */,
+				43D53E4723F971D2005DFC4A /* PagingVC.swift in Sources */,
 				43D53E3423F82A8E005DFC4A /* AuthorizationActor.swift in Sources */,
 				43C2862223F159AB007D3714 /* UIButton.swift in Sources */,
 				43D53E2B23F78957005DFC4A /* ImageCell.swift in Sources */,

@@ -29,7 +29,7 @@ class MainActor: MainActorDelegate {
     
     func didTapMemoListTableViewCell(index: Int) {
         let memo = self.memoListData[index]
-        self.view?.presentMemoDetailVCToEdit(targetMemo: memo)
+        self.view?.presentMemoDetailVCToEdit(targetMemo: memo, index: index)
     }
     
     func deleteMemoData(_ memo: Memo, _ index: Int) {

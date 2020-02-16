@@ -48,10 +48,10 @@ class MemoModel {
         })
     }
     
-    func removeMemoImage(memo: Memo, index: Int) {
+    func removeMemoImage(memo: Memo, imageIndex: Int) {
         try? self.realm.write ({
-            memo.imageList.remove(at: index)
-            let image = memo.imageList[index]
+            memo.imageList.remove(at: imageIndex)
+            let image = memo.imageList[imageIndex]
             self.realm.delete(image)
         })
     }

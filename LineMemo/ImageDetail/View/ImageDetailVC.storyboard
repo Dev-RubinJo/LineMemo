@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image DetailVC-->
+        <scene sceneID="55f-iP-xGc">
+            <objects>
+                <viewController storyboardIdentifier="ImageDetailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mn5-Mk-KGW" customClass="ImageDetailVC" customModule="LineMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RaH-iz-cqJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fBb-uA-tqG">
+                                <rect key="frame" x="364" y="54" width="30" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButton:" destination="Mn5-Mk-KGW" eventType="touchUpInside" id="sNj-m7-jBE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eif-kL-kql" firstAttribute="trailing" secondItem="fBb-uA-tqG" secondAttribute="trailing" constant="20" id="Rv9-Pw-VEy"/>
+                            <constraint firstItem="fBb-uA-tqG" firstAttribute="top" secondItem="eif-kL-kql" secondAttribute="top" constant="10" id="dcT-Mh-9Gx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eif-kL-kql"/>
+                    </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="fBb-uA-tqG" id="cLg-RN-FVM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfd-0F-yko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-825" y="-150"/>
+        </scene>
+        <!--PagingVC-->
+        <scene sceneID="Nn0-Ik-OGa">
+            <objects>
+                <pageViewController storyboardIdentifier="PagingVC" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="9tn-Cz-ddM" customClass="PagingVC" customModule="LineMemo" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AhF-S3-VfY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="41" y="-154"/>
+        </scene>
+        <!--Image ContainerVC-->
+        <scene sceneID="5Wx-tv-Xh8">
+            <objects>
+                <viewController storyboardIdentifier="ImageContainerVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="15S-yl-SqF" customClass="ImageContainerVC" customModule="LineMemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RP8-S3-G9E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="af6-co-NBW">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="af6-co-NBW" firstAttribute="leading" secondItem="hzA-cG-jVg" secondAttribute="leading" id="CTb-a4-rs5"/>
+                            <constraint firstItem="af6-co-NBW" firstAttribute="top" secondItem="hzA-cG-jVg" secondAttribute="top" id="YiN-PY-8Y2"/>
+                            <constraint firstItem="hzA-cG-jVg" firstAttribute="bottom" secondItem="af6-co-NBW" secondAttribute="bottom" id="tpp-fu-ICc"/>
+                            <constraint firstItem="hzA-cG-jVg" firstAttribute="trailing" secondItem="af6-co-NBW" secondAttribute="trailing" id="wuU-wX-d0E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hzA-cG-jVg"/>
+                    </view>
+                    <connections>
+                        <outlet property="memoImageView" destination="af6-co-NBW" id="q73-Ex-BYB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xyE-Ec-a3O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840" y="-150"/>
+        </scene>
+    </scenes>
+</document>

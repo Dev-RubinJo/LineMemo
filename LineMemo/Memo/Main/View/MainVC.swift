@@ -70,10 +70,10 @@ extension MainVC: MainVCRouterDelegate {
         self.navigationController?.pushViewController(memoDetailVC, animated: true)
     }
     
-    func presentMemoDetailVCToEdit(targetMemo memo: Memo) {
+    func presentMemoDetailVCToEdit(targetMemo memo: Memo, index: Int) {
         let memoDetailVC = MemoDetailVC.makeMemoDetailVC()
         memoDetailVC.memoData = memo
-        
+        memoDetailVC.memoIndex = index
         self.navigationController?.pushViewController(memoDetailVC, animated: true)
     }
 }

@@ -21,7 +21,6 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
         }
         
         let memoCellData = self.actor?.memoListData[indexPath.row]
-        print(memoCellData)
         
         cell.memoCellTitleLabel.text = memoCellData?.title
         cell.memoCellContentLabel.text = memoCellData?.content

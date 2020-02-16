@@ -16,9 +16,14 @@ protocol MemoDetailVCProtocol: BaseVCProtocol {
 protocol MemoDetailVCRouterProtocol: class {
     
     static func makeMemoDetailVC() -> MemoDetailVC
+    
+    func presentImageDetailVC(fromVC vc: MemoDetailVC, imageIndex: Int)
 }
 
 protocol MemoDetailActorDelegate: class {
+    // TODO: 이미지 삭제 기능 추가
+    // TODO: 이미지 크게 보기 기능 추가
+
     var view: MemoDetailVCRouterProtocol? { get set }
     
     func didLoadMemoDetailVC()
@@ -29,5 +34,14 @@ protocol MemoDetailActorDelegate: class {
     
     func didTapEditButtonItem(memo: Memo, title: String, content: String)
     
+    func didTapDeleteButtonItem(memo: Memo, index: Int)
+    
+    func presentDeleteMemoAlert(toVC vc: MemoDetailVC)
+    
     func presentGetUrlAlert(toVC vc: MemoDetailVC)
+    
+    func presentDeleteImageAlert(toVC vc: MemoDetailVC, memo: Memo, imageIndex: Int)
+    
+    func didTapImageCell(fromVC vc: MemoDetailVC, imageIndex: Int)
 }
+

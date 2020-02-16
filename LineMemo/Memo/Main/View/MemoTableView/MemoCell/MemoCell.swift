@@ -30,6 +30,9 @@ class MemoCell: UITableViewCell {
             }
         } else {
             self.memoCellImageView.isHidden = false
+            self.memoCellContentLabel.snp.makeConstraints { make in
+                make.right.equalTo(self.memoCellImageView.snp.leftMargin).offset(-10)
+            }
         }
     }
 }

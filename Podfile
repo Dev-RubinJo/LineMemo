@@ -8,6 +8,8 @@ target 'LineMemo' do
   # Pods for LineMemo
   pod 'RealmSwift'
   pod 'Kingfisher', '~> 5.0'
+  pod 'AlamofireImage', '~> 3.5'
+  pod 'SnapKit', '~> 5.0.0'
 
   target 'LineMemoTests' do
     inherit! :search_paths

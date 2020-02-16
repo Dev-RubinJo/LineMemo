@@ -11,6 +11,9 @@ import Foundation
 import RealmSwift
 
 class MemoModel {
+    
+    private let realm = try! Realm()
+    
     static let shared = MemoModel()
     private init() {
         guard let memoDatas = RealmManager.default.getObjects(type: Memo.self)?.sorted(byKeyPath: "id", ascending: true) else { return }
@@ -33,8 +36,24 @@ class MemoModel {
         RealmManager.default.saveObjects(objs: memo)
     }
     
-    func editMemo(memo: Memo) {
-        RealmManager.default.editObjects(objs: memo)
+    func editMemo(memo: Memo, title: String, content: String) {
+        RealmManager.default.editMemoObjects(memo: memo, title: title, content: content)
+    }
+    
+    func addImage(memo: Memo, imageData: Data) {
+        try? self.realm.write ({
+            let image = Image(image: imageData)
+            memo.imageList.append(image)
+            self.realm.add(memo, update: .all)
+        })
+    }
+    
+    func removeMemoImage(memo: Memo, index: Int) {
+        try? self.realm.write ({
+            memo.imageList.remove(at: index)
+            let image = memo.imageList[index]
+            self.realm.delete(image)
+        })
     }
     
     func deleteMemo(targetMemo memo: Memo, index: Int) {

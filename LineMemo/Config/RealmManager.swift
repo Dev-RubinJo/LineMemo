@@ -38,11 +38,11 @@ class RealmManager {
     }
     
     // editing the object
-    func editObjects(objs: Object) {
+    func editMemoObjects(memo: Memo, title: String, content: String) {
         try? self.realm!.write ({
-            // If update = true, objects that are already in the Realm will be
-            // updated instead of added a new.
-            self.realm?.add(objs, update: .all)
+            memo.title = title
+            memo.content = content
+            self.realm?.add(memo, update: .all)
         })
     }
     

@@ -18,15 +18,23 @@ class MemoDetailVC: BaseVC, MemoDetailVCProtocol {
     
     // Memo를 띄워주기 위해 MemoData 선언
     var memoData: Memo?
+    // 이미지 변수를 임시 저장하기 위한 imageList 선언
+    var imageList: [UIImage] = []
+    // 새 이미지 변수를 위한 tempImageList 선언
+    var tempImageList: [UIImage] = []
     // TextView Placeholder 색상을 지정해주기 위해 색상 설정
     var textViewPlaceholderColor: UIColor!
-   
+    
     /// 카메라 혹은 앨범을 위한 picker 선언
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.initVC()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.memoDetailImageCollectionView.reloadData()
     }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
@@ -38,6 +46,13 @@ class MemoDetailVC: BaseVC, MemoDetailVCProtocol {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.barTintColor = .white
         
+        if let memo = self.memoData {
+            for index in 0 ..< memo.imageList.count {
+                self.imageList.append(UIImage(data: memo.imageList[index].imageUrl)!)
+            }
+        }
+        
+        self.imagePicker.delegate = self
         self.memoDetailTitleTextField.delegate = self
         self.memoDetailContentTextView.delegate = self
         self.memoDetailImageCollectionView.delegate = self

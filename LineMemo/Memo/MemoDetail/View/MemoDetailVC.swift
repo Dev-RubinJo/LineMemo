@@ -30,8 +30,6 @@ class MemoDetailVC: BaseVC, MemoDetailVCProtocol {
     }
     // 이미지 변수를 임시 저장하기 위한 imageList 선언
     var imageList: [UIImage] = []
-    // 새 이미지 변수를 위한 tempImageList 선언
-    var tempImageList: [UIImage] = []
     // TextView Placeholder 색상을 지정해주기 위해 색상 설정
     var textViewPlaceholderColor: UIColor!
     

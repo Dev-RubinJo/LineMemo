@@ -23,9 +23,6 @@ class ImageDetailVC: BaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(imageIndex)
-        
         self.pagingVC = self.storyboard?.instantiateViewController(withIdentifier: "PagingVC") as? PagingVC
         self.pagingVC.dataSource = self
         

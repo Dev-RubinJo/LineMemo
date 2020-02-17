@@ -80,7 +80,12 @@ class MemoDetailActor: MemoDetailActorDelegate {
         Alamofire.request(url).responseImage { response in
             if let image = response.result.value {
                 vc.imageList.append(image)
-                vc.tempImageList.append(image)
+                if let memo = vc.memoData {
+                    guard let imageData = image.jpegData(compressionQuality: 0.3) else { vc.dismiss(animated: true, completion: nil)
+                        return
+                    }
+                    self.appendImageToMemo(memo: memo, image: imageData)
+                }
                 vc.memoDetailImageCollectionView.reloadData()
             } else {
                 vc.presentAlert(title: "올바르지 않은 URL", message: "해당 URL로부터 이미지를 가져올 수 없어요! 다른 URL로 시도해주시겠어요?")
@@ -93,7 +98,6 @@ class MemoDetailActor: MemoDetailActorDelegate {
         // TODO: 수정을 할 때 해당 기능으로 이미지 삭제하면 무조건 삭제가 된다. 기능을 추 후에 다시 검토할것
         let deleteAction = UIAlertAction(title: "삭제하기", style: .default) { _ in
             vc.imageList.remove(at: imageIndex - 1)
-//            vc.tempImageList.remove(at: imageIndex - 1)
             if !memo.imageList.isEmpty {
                 MemoModel.shared.removeMemoImage(memo: memo, imageIndex: imageIndex - 1)
             }

@@ -49,6 +49,7 @@ extension MemoDetailVC {
     
     @objc func pressAddButtonItem(_ sender: UIBarButtonItem) {
         let id = UserDefaults.standard.integer(forKey: "memoIdNumber")
+        var content: String = ""
         guard let title = self.memoDetailTitleTextField.text else {
             return
         }
@@ -56,27 +57,18 @@ extension MemoDetailVC {
             self.presentAlert(title: "제목은 필수 입력입니다!", message: "제목은 필수 입력이니 입력해주세요!")
             return
         }
-        let memo = Memo(id: id, title: self.memoDetailTitleTextField.text!, content: self.memoDetailContentTextView.text, imageList: [])
+        if self.memoDetailContentTextView.text == "내용을 입력해주세요" {
+            content = ""
+        } else {
+            content = self.memoDetailContentTextView.text
+        }
+        let memo = Memo(id: id, title: title, content: content, imageList: [])
         UserDefaults.standard.set(id + 1, forKey: "memoIdNumber")
         self.actor?.didTapAddButtonItem(memo: memo)
-        for image in self.tempImageList {
-            guard let imageData = image.jpegData(compressionQuality: 0.3) else {
-                return
-            }
-            self.actor?.appendImageToMemo(memo: memo, image: imageData)
-        }
         self.navigationController?.popViewController(animated: true)
     }
     
     @objc func pressEditButtonItem(_ sender: UIBarButtonItem) {
-        for image in self.tempImageList {
-            if let memo = self.memoData {
-                guard let imageData = image.jpegData(compressionQuality: 0.3) else { self.dismiss(animated: true, completion: nil)
-                    return
-                }
-                self.actor?.appendImageToMemo(memo: memo, image: imageData)
-            }
-        }
         let title = self.memoDetailTitleTextField.text!
         let content = self.memoDetailContentTextView.text!
         self.actor?.didTapEditButtonItem(memo: self.memoData!, title: title, content: content)

@@ -31,7 +31,7 @@ class ImageDetailVC: BaseVC {
             self.viewControllers.append(vc)
         }
                 
-        self.pagingVC.setViewControllers([self.viewControllers[imageIndex]] , direction: .forward, animated: true, completion: nil)
+        self.pagingVC.setViewControllers([self.viewControllers[0]] , direction: .forward, animated: true, completion: nil)
         self.pagingVC.view.frame = CGRect.init(x: 0, y: 30, width: self.view.frame.width, height: self.view.frame.height - 50)
         
         self.addChild(self.pagingVC)
@@ -58,7 +58,7 @@ extension ImageDetailVC: UIPageViewControllerDataSource {
         
         index -= 1
         
-        if index <= 0 || index == self.imageList.count {
+        if index < 0 || index == self.imageList.count {
             return nil
         }
         
@@ -72,7 +72,7 @@ extension ImageDetailVC: UIPageViewControllerDataSource {
         
         index += 1
         
-        if index <= 0 || index == self.imageList.count {
+        if index < 0 || index == self.imageList.count {
             return nil
         }
         

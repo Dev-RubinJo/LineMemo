@@ -57,12 +57,6 @@ class MemoModel {
     }
     
     func deleteMemo(targetMemo memo: Memo, index: Int) {
-//        FindMemoIndexToDeleteLoop: for memoIndex in 0 ..< self._memoList.count {
-//            if memo.isEqual(self._memoList[memoIndex]) {
-//
-//                break FindMemoIndexToDeleteLoop
-//            }
-//        }
         self._memoList.remove(at: index)
         RealmManager.default.deleteObject(objs: memo)
     }

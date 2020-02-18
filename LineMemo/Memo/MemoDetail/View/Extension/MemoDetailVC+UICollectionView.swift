@@ -42,7 +42,7 @@ extension MemoDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCell else {
                 return 
             }
-            self.actor?.didTapImageCell(fromVC: self, imageIndex: indexPath.item)
+            self.actor?.didTapImageCell(fromVC: self, imageIndex: indexPath.item - 1)
         }
     }
 }

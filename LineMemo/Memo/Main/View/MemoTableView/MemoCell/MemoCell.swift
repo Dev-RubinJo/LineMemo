@@ -7,6 +7,7 @@
 //
 
 import UIKit
+// 이미지가 있을 경우와 없을 경우를 코드로 구분하기 위하여 SnapKit사용
 import SnapKit
 
 class MemoCell: UITableViewCell {

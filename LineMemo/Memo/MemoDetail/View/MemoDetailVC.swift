@@ -98,7 +98,7 @@ extension MemoDetailVC: MemoDetailVCRouterProtocol {
         for image in self.imageList {
             imageDetailVC.imageList.append(image)
         }
-        imageDetailVC.imageIndex = imageIndex - 1
+        imageDetailVC.imageIndex = imageIndex
         self.present(imageDetailVC, animated: true, completion: nil)
     }
 }

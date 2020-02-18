@@ -19,7 +19,7 @@ class ImageDetailVC: BaseVC {
     var imageList: [UIImage] = []
     var imageIndex: Int!
     
-    let viewControllers: NSArray = []
+    var viewControllers: [UIViewController] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +28,10 @@ class ImageDetailVC: BaseVC {
         
         for index in 0 ..< self.imageList.count {
             let vc = self.viewControllerAtIndex(index: index) as ImageContainerVC
-            self.viewControllers.adding(vc)
+            self.viewControllers.append(vc)
         }
-        
-        let startVC = self.viewControllerAtIndex(index: self.imageIndex) as ImageContainerVC
-        let viewControllers = NSArray(object: startVC)
                 
-        self.pagingVC.setViewControllers(viewControllers as? [UIViewController] , direction: .forward, animated: true, completion: nil)
+        self.pagingVC.setViewControllers([self.viewControllers[imageIndex]] , direction: .forward, animated: true, completion: nil)
         self.pagingVC.view.frame = CGRect.init(x: 0, y: 30, width: self.view.frame.width, height: self.view.frame.height - 50)
         
         self.addChild(self.pagingVC)

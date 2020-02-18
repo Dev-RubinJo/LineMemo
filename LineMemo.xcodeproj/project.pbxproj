@@ -56,7 +56,6 @@
 		43F81E0C23F57543005081BE /* MemoDetailProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81E0B23F57543005081BE /* MemoDetailProtocol.swift */; };
 		43F81E0E23F57640005081BE /* MemoDetailActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81E0D23F57640005081BE /* MemoDetailActor.swift */; };
 		43F81E1023F57AFD005081BE /* MemoDetailVC+SetUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81E0F23F57AFD005081BE /* MemoDetailVC+SetUI.swift */; };
-		43F81E1223F67BDF005081BE /* LineMemoFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F81E1123F67BDF005081BE /* LineMemoFileManager.swift */; };
 		CFF7FDC3771524EB4A5D6560 /* libPods-LineMemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60ABE6F7D8BB510CD4C907 /* libPods-LineMemoTests.a */; };
 /* End PBXBuildFile section */
 
@@ -123,7 +122,6 @@
 		43F81E0B23F57543005081BE /* MemoDetailProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailProtocol.swift; sourceTree = "<group>"; };
 		43F81E0D23F57640005081BE /* MemoDetailActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoDetailActor.swift; sourceTree = "<group>"; };
 		43F81E0F23F57AFD005081BE /* MemoDetailVC+SetUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoDetailVC+SetUI.swift"; sourceTree = "<group>"; };
-		43F81E1123F67BDF005081BE /* LineMemoFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineMemoFileManager.swift; sourceTree = "<group>"; };
 		474FF4FDBCD4134C99BEC725 /* libPods-LineMemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LineMemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F4C051CDC667D3AC01D46F /* Pods-LineMemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineMemo.release.xcconfig"; path = "Target Support Files/Pods-LineMemo/Pods-LineMemo.release.xcconfig"; sourceTree = "<group>"; };
 		989DE2FE8D22EF88A6C4B36F /* Pods-LineMemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LineMemo.debug.xcconfig"; path = "Target Support Files/Pods-LineMemo/Pods-LineMemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -331,7 +329,6 @@
 				43C2862823F15A0B007D3714 /* IndicatorView.swift */,
 				43C2862A23F15A26007D3714 /* ColorPalette.swift */,
 				43527EF623F38A4100291561 /* RealmManager.swift */,
-				43F81E1123F67BDF005081BE /* LineMemoFileManager.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -696,7 +693,6 @@
 				43527EE623F2CFBC00291561 /* MainProtocol.swift in Sources */,
 				43C2862423F159C0007D3714 /* UIColor.swift in Sources */,
 				43F81DF923F4588D005081BE /* MemoModel.swift in Sources */,
-				43F81E1223F67BDF005081BE /* LineMemoFileManager.swift in Sources */,
 				43F81E0C23F57543005081BE /* MemoDetailProtocol.swift in Sources */,
 				43527EF723F38A4100291561 /* RealmManager.swift in Sources */,
 				43D53E3A23F90ACF005DFC4A /* MemoDetailVC+UIImagePickerController.swift in Sources */,

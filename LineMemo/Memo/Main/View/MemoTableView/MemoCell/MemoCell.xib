@@ -45,7 +45,8 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="woY-7v-9l2">
                         <rect key="frame" x="250" y="0.0" width="70" height="70"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="woY-7v-9l2" secondAttribute="height" multiplier="1:1" id="Fdk-Iw-ElR"/>
+                            <constraint firstAttribute="width" constant="70" id="Ksv-8K-Wdo"/>
+                            <constraint firstAttribute="height" constant="70" id="cRp-fx-PbE"/>
                         </constraints>
                     </imageView>
                 </subviews>
@@ -64,9 +65,11 @@
             <connections>
                 <outlet property="memoCellContentLabel" destination="w3P-Cf-wkn" id="p3m-I7-A7B"/>
                 <outlet property="memoCellImageView" destination="woY-7v-9l2" id="TOf-as-Jhi"/>
+                <outlet property="memoCellImageViewWidth" destination="Ksv-8K-Wdo" id="zTp-Vy-mJv"/>
                 <outlet property="memoCellTitleLabel" destination="Qfo-rB-YvI" id="k8w-ic-1uA"/>
+                <outlet property="memoCellView" destination="EvK-O8-pjJ" id="adC-NQ-c9F"/>
             </connections>
-            <point key="canvasLocation" x="141" y="154"/>
+            <point key="canvasLocation" x="140.57971014492756" y="153.34821428571428"/>
         </tableViewCell>
     </objects>
 </document>

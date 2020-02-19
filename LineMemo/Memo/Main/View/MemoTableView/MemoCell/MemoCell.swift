@@ -7,14 +7,14 @@
 //
 
 import UIKit
-// 이미지가 있을 경우와 없을 경우를 코드로 구분하기 위하여 SnapKit사용
-import SnapKit
 
 class MemoCell: UITableViewCell {
     
+    @IBOutlet weak var memoCellView: UIView!
     @IBOutlet weak var memoCellTitleLabel: UILabel!
     @IBOutlet weak var memoCellContentLabel: UILabel!
     @IBOutlet weak var memoCellImageView: UIImageView!
+    @IBOutlet weak var memoCellImageViewWidth: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,14 +26,12 @@ class MemoCell: UITableViewCell {
     func setMemoCellImageViewHidden(_ checkBoolean: Bool) {
         if checkBoolean {
             self.memoCellImageView.isHidden = true
-            self.memoCellContentLabel.snp.makeConstraints { make in
-                make.right.equalTo(self.contentView.snp.rightMargin).offset(10)
-            }
+            self.memoCellImageViewWidth.constant = 0
         } else {
+            let imageViewWidth = 70
+            print(imageViewWidth)
             self.memoCellImageView.isHidden = false
-            self.memoCellContentLabel.snp.makeConstraints { make in
-                make.right.equalTo(self.memoCellImageView.snp.leftMargin).offset(-10)
-            }
+            self.memoCellImageViewWidth.constant = 70
         }
     }
 }

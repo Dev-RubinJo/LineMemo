@@ -36,12 +36,9 @@ extension MemoDetailVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.item == 0 {
             DispatchQueue.main.async {
-                self.showAddImageSheet()
+                self.actor?.showAddImageSheet(toVC: self)
             }
         } else {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as? ImageCell else {
-                return 
-            }
             self.actor?.didTapImageCell(fromVC: self, imageIndex: indexPath.item - 1)
         }
     }

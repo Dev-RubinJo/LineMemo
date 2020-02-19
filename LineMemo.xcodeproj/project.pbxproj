@@ -20,6 +20,8 @@
 		43527EEF23F2CFFA00291561 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43527EEE23F2CFFA00291561 /* MainTests.swift */; };
 		43527EF523F389DC00291561 /* Memo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43527EF423F389DC00291561 /* Memo.swift */; };
 		43527EF723F38A4100291561 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43527EF623F38A4100291561 /* RealmManager.swift */; };
+		439BE62F23FD0CDC00EC77A9 /* ImageDetailVC+SetUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439BE62E23FD0CDC00EC77A9 /* ImageDetailVC+SetUI.swift */; };
+		439BE63123FD0DA400EC77A9 /* ImageDetailVC+UIPageViewControllerDelegate+UIPageViewControllerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439BE63023FD0DA400EC77A9 /* ImageDetailVC+UIPageViewControllerDelegate+UIPageViewControllerDataSource.swift */; };
 		43C285F823F157B3007D3714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C285F723F157B3007D3714 /* AppDelegate.swift */; };
 		43C285FA23F157B3007D3714 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C285F923F157B3007D3714 /* SceneDelegate.swift */; };
 		43C2860123F157B4007D3714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43C2860023F157B4007D3714 /* Assets.xcassets */; };
@@ -82,6 +84,8 @@
 		43527EEE23F2CFFA00291561 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
 		43527EF423F389DC00291561 /* Memo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memo.swift; sourceTree = "<group>"; };
 		43527EF623F38A4100291561 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		439BE62E23FD0CDC00EC77A9 /* ImageDetailVC+SetUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageDetailVC+SetUI.swift"; sourceTree = "<group>"; };
+		439BE63023FD0DA400EC77A9 /* ImageDetailVC+UIPageViewControllerDelegate+UIPageViewControllerDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageDetailVC+UIPageViewControllerDelegate+UIPageViewControllerDataSource.swift"; sourceTree = "<group>"; };
 		43C285F423F157B3007D3714 /* LineMemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LineMemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43C285F723F157B3007D3714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43C285F923F157B3007D3714 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -272,6 +276,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		439BE62D23FD0CC700EC77A9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				439BE62E23FD0CDC00EC77A9 /* ImageDetailVC+SetUI.swift */,
+				439BE63023FD0DA400EC77A9 /* ImageDetailVC+UIPageViewControllerDelegate+UIPageViewControllerDataSource.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		43C285EB23F157B2007D3714 = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +421,7 @@
 		43D53E3C23F962AF005DFC4A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				439BE62D23FD0CC700EC77A9 /* Extension */,
 				43D53E4123F96541005DFC4A /* ImageDetailVC.storyboard */,
 				43D53E3D23F96305005DFC4A /* ImageDetailVC.swift */,
 				43D53E4623F971D2005DFC4A /* PagingVC.swift */,
@@ -698,6 +712,7 @@
 				43D53E3A23F90ACF005DFC4A /* MemoDetailVC+UIImagePickerController.swift in Sources */,
 				43527EEB23F2CFE700291561 /* MainVC.swift in Sources */,
 				43C2861B23F15921007D3714 /* BaseVC.swift in Sources */,
+				439BE62F23FD0CDC00EC77A9 /* ImageDetailVC+SetUI.swift in Sources */,
 				43F81E0323F558C4005081BE /* MainVC+TableView.swift in Sources */,
 				43C2862023F15980007D3714 /* String.swift in Sources */,
 				434D2B4023F2C50D00E1E0D1 /* SplashProtocol.swift in Sources */,
@@ -718,6 +733,7 @@
 				43D53E3423F82A8E005DFC4A /* AuthorizationActor.swift in Sources */,
 				43C2862223F159AB007D3714 /* UIButton.swift in Sources */,
 				43D53E2B23F78957005DFC4A /* ImageCell.swift in Sources */,
+				439BE63123FD0DA400EC77A9 /* ImageDetailVC+UIPageViewControllerDelegate+UIPageViewControllerDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

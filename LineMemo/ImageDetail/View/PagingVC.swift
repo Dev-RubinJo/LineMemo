@@ -12,7 +12,5 @@ class PagingVC: UIPageViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
 }

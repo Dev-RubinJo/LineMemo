@@ -31,11 +31,6 @@ class MemoDetailActor: MemoDetailActorDelegate {
         MemoModel.shared.editMemo(memo: memo, title: title, content: content)
     }
     
-    /// 해당 메서드는 삭제 버튼을 눌렀을 때 바로 작동하는 메서드가 아니므로 delegate 메서드가 아님
-    func didTapDeleteButtonItem(memo: Memo, index: Int) {
-        MemoModel.shared.deleteMemo(targetMemo: memo, index: index)
-    }
-    
     func presentDeleteMemoAlert(toVC vc: MemoDetailVC) {
         let deleteAction = UIAlertAction(title: "삭제하기", style: .default) { _ in
             guard let memo = vc.memoData else { return }
@@ -103,26 +98,6 @@ class MemoDetailActor: MemoDetailActorDelegate {
         vc.present(alertWithUrlTextField, animated: true, completion: nil)
     }
     
-    // 이미지를 가져오는 행위를 하는 함수 따로 정의(not delegate func)
-    func getImageFromURL(url: String, vc: MemoDetailVC) {
-        // 기능 명세에 `URL로 이미지를 추가하는 경우, 다운로드하여 첨부할 필요는 없습니다`라고 적혀있어서
-        // realm Memo와 Image Data의 관리를 위해 다운로드하여 관리하는 것으로 통일
-        Alamofire.request(url).responseImage { response in
-            if let image = response.result.value {
-                vc.imageList.append(image)
-                if let memo = vc.memoData {
-                    guard let imageData = image.jpegData(compressionQuality: 0.3) else { vc.dismiss(animated: true, completion: nil)
-                        return
-                    }
-                    self.appendImageToMemo(memo: memo, image: imageData)
-                }
-                vc.memoDetailImageCollectionView.reloadData()
-            } else {
-                vc.presentAlert(title: "올바르지 않은 URL", message: "해당 URL로부터 이미지를 가져올 수 없어요! 다른 URL로 시도해주시겠어요?")
-            }
-        }
-    }
-    
     // 이미지 삭제를 위한 long press gesture에서 띄울 Alert
     func presentDeleteImageAlert(toVC vc: MemoDetailVC, memo: Memo, imageIndex: Int) {
         // TODO: 수정을 할 때 해당 기능으로 이미지 삭제하면 무조건 삭제가 된다. 기능을 추 후에 다시 검토할것
@@ -139,5 +114,32 @@ class MemoDetailActor: MemoDetailActorDelegate {
     func didTapImageCell(fromVC vc: MemoDetailVC, imageIndex: Int) {
         
         self.view?.presentImageDetailVC(fromVC: vc, imageIndex: imageIndex)
+    }
+}
+extension MemoDetailActor {
+    
+    /// 해당 메서드는 삭제 버튼을 눌렀을 때 바로 작동하는 메서드가 아니므로 delegate 메서드가 아님
+    fileprivate func didTapDeleteButtonItem(memo: Memo, index: Int) {
+        MemoModel.shared.deleteMemo(targetMemo: memo, index: index)
+    }
+    
+    /// 이미지를 가져오는 행위를 하는 함수 따로 정의(not delegate func)
+    fileprivate func getImageFromURL(url: String, vc: MemoDetailVC) {
+        // 기능 명세에 `URL로 이미지를 추가하는 경우, 다운로드하여 첨부할 필요는 없습니다`라고 적혀있어서
+        // realm Memo와 Image Data의 관리를 위해 다운로드하여 관리하는 것으로 통일
+        Alamofire.request(url).responseImage { response in
+            if let image = response.result.value {
+                vc.imageList.append(image)
+                if let memo = vc.memoData {
+                    guard let imageData = image.jpegData(compressionQuality: 0.3) else { vc.dismiss(animated: true, completion: nil)
+                        return
+                    }
+                    self.appendImageToMemo(memo: memo, image: imageData)
+                }
+                vc.memoDetailImageCollectionView.reloadData()
+            } else {
+                vc.presentAlert(title: "올바르지 않은 URL", message: "해당 URL로부터 이미지를 가져올 수 없어요! 다른 URL로 시도해주시겠어요?")
+            }
+        }
     }
 }

@@ -23,9 +23,7 @@ protocol MemoDetailVCRouterProtocol: class {
 }
 
 protocol MemoDetailActorDelegate: class {
-    // TODO: 이미지 삭제 기능 추가
-    // TODO: 이미지 크게 보기 기능 추가
-
+    
     var view: MemoDetailVCRouterProtocol? { get set }
     
     func appendImageToMemo(memo: Memo, image: Data)

@@ -26,9 +26,14 @@
                                     <action selector="dismissButton:" destination="Mn5-Mk-KGW" eventType="touchUpInside" id="sNj-m7-jBE"/>
                                 </connections>
                             </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Nta-ni-1s3">
+                                <rect key="frame" x="187.5" y="805" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="eif-kL-kql" firstAttribute="bottom" secondItem="Nta-ni-1s3" secondAttribute="bottom" constant="20" id="0GE-gB-1mo"/>
+                            <constraint firstItem="Nta-ni-1s3" firstAttribute="centerX" secondItem="RaH-iz-cqJ" secondAttribute="centerX" id="Rbx-H2-z6M"/>
                             <constraint firstItem="eif-kL-kql" firstAttribute="trailing" secondItem="fBb-uA-tqG" secondAttribute="trailing" constant="20" id="Rv9-Pw-VEy"/>
                             <constraint firstItem="fBb-uA-tqG" firstAttribute="top" secondItem="eif-kL-kql" secondAttribute="top" constant="10" id="dcT-Mh-9Gx"/>
                         </constraints>
@@ -36,6 +41,7 @@
                     </view>
                     <connections>
                         <outlet property="dismissButton" destination="fBb-uA-tqG" id="cLg-RN-FVM"/>
+                        <outlet property="pageControl" destination="Nta-ni-1s3" id="C0A-FD-mu5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfd-0F-yko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -45,7 +51,7 @@
         <!--PagingVC-->
         <scene sceneID="Nn0-Ik-OGa">
             <objects>
-                <pageViewController storyboardIdentifier="PagingVC" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="9tn-Cz-ddM" customClass="PagingVC" customModule="LineMemo" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="PagingVC" autoresizesArchivedViewToFullSize="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" transitionStyle="scroll" pageSpacing="10" navigationOrientation="horizontal" spineLocation="none" id="9tn-Cz-ddM" customClass="PagingVC" customModule="LineMemo" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AhF-S3-VfY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="41" y="-154"/>

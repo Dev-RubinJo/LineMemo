@@ -10,7 +10,9 @@ import UIKit
 
 class ImageDetailVC: BaseVC {
     
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var dismissButton: UIButton!
+    
     @IBAction func dismissButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -18,6 +20,7 @@ class ImageDetailVC: BaseVC {
     var pagingVC: PagingVC!
     var imageList: [UIImage] = []
     var imageIndex: Int!
+    let pageControlHeight: CGFloat = 20
     
     var viewControllers: [UIViewController] = []
     
@@ -25,17 +28,22 @@ class ImageDetailVC: BaseVC {
         super.viewDidLoad()
         self.pagingVC = self.storyboard?.instantiateViewController(withIdentifier: "PagingVC") as? PagingVC
         self.pagingVC.dataSource = self
+        self.pagingVC.delegate = self
         
         for index in 0 ..< self.imageList.count {
             let vc = self.viewControllerAtIndex(index: index) as ImageContainerVC
             self.viewControllers.append(vc)
         }
-                
-        self.pagingVC.setViewControllers([self.viewControllers[0]] , direction: .forward, animated: true, completion: nil)
+    
+        self.pagingVC.setViewControllers([self.viewControllers[imageIndex]] , direction: .forward, animated: true, completion: nil)
+//        self.pagingVC.indicator.
         self.pagingVC.view.frame = CGRect.init(x: 0, y: 30, width: self.view.frame.width, height: self.view.frame.height - 50)
         
         self.addChild(self.pagingVC)
         self.view.addSubview(self.pagingVC.view)
+        
+        self.pageControl.numberOfPages = self.viewControllers.count
+        self.pageControl.currentPage = self.imageIndex
         
         self.view.bringSubviewToFront(self.dismissButton)
     }
@@ -50,7 +58,15 @@ class ImageDetailVC: BaseVC {
     }
 }
 
-extension ImageDetailVC: UIPageViewControllerDataSource {
+extension ImageDetailVC: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        let pageContentViewController = pageViewController.viewControllers![0] as! ImageContainerVC
+        let index = pageContentViewController.pageIndex
+        
+        self.pageControl.currentPage = index!
+    }
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         let vc = viewController as! ImageContainerVC
         
@@ -78,13 +94,4 @@ extension ImageDetailVC: UIPageViewControllerDataSource {
         
         return self.viewControllerAtIndex(index: index)
     }
-    
-    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return self.imageList.count
-    }
-    
-    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 0
-    }
-    
 }

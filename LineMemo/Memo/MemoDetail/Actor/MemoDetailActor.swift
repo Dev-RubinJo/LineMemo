@@ -19,10 +19,6 @@ class MemoDetailActor: MemoDetailActorDelegate {
     
     weak var view: MemoDetailVCRouterProtocol?
     
-    func didLoadMemoDetailVC() {
-        
-    }
-    
     func appendImageToMemo(memo: Memo, image: Data) {
         MemoModel.shared.addImage(memo: memo, imageData: image)
     }
@@ -35,6 +31,7 @@ class MemoDetailActor: MemoDetailActorDelegate {
         MemoModel.shared.editMemo(memo: memo, title: title, content: content)
     }
     
+    /// 해당 메서드는 삭제 버튼을 눌렀을 때 바로 작동하는 메서드가 아니므로 delegate 메서드가 아님
     func didTapDeleteButtonItem(memo: Memo, index: Int) {
         MemoModel.shared.deleteMemo(targetMemo: memo, index: index)
     }
@@ -51,6 +48,40 @@ class MemoDetailActor: MemoDetailActorDelegate {
         vc.presentAlertWithAction(title: "정말로 삭제하실껀가요?", message: "맞다면 삭제하기 버튼을 눌러주세요!", deleteAction)
     }
     
+    /// 사진 불러올 때의 액션시트 띄우기 함수
+    func showAddImageSheet(toVC vc: MemoDetailVC) {
+        let addImageActionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        // 카메라 액션
+        let fromCameraAction = UIAlertAction(title: "카메라로 사진찍기", style: .default) { _ in
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                vc.imagePicker.sourceType = .camera
+                self.view?.presentImagePickerController(targetVC: vc.imagePicker)
+            }
+        }
+        // 앨범 액션
+        let fromAlbumAction = UIAlertAction(title: "앨범에서 사진 가져오기", style: .default) { _ in
+            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+                vc.imagePicker.sourceType = .photoLibrary
+                vc.imagePicker.mediaTypes = ["public.image"]
+                vc.imagePicker.modalPresentationStyle = .fullScreen
+                self.view?.presentImagePickerController(targetVC: vc.imagePicker)
+            }
+        }
+        // URL로 사진 가져오기 액션
+        let fromURLAction = UIAlertAction(title: "URL로 사진 가져오기", style: .default) { _ in
+            vc.actor?.presentGetUrlAlert(toVC: vc)
+        }
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .destructive, handler: nil)
+        
+        addImageActionSheet.addAction(fromCameraAction)
+        addImageActionSheet.addAction(fromAlbumAction)
+        addImageActionSheet.addAction(fromURLAction)
+        addImageActionSheet.addAction(cancelAction)
+        
+        vc.present(addImageActionSheet, animated: true, completion: nil)
+    }
+    
     func presentGetUrlAlert(toVC vc: MemoDetailVC) {
         let alertWithUrlTextField = UIAlertController(title: "URL을 입력해주세요!", message: "가져오고 싶은 사진의 URL을 입력해주세요!", preferredStyle: .alert)
         alertWithUrlTextField.addTextField { textField in
@@ -62,7 +93,6 @@ class MemoDetailActor: MemoDetailActorDelegate {
             }
         }
         let doneAction = UIAlertAction(title: "가져오기", style: .default) { _ in
-            print("test")
             self.getImageFromURL(url: (alertWithUrlTextField.textFields?[0].text)!, vc: vc)
         }
         let cancelAction = UIAlertAction(title: "취소", style: .destructive)
@@ -103,11 +133,11 @@ class MemoDetailActor: MemoDetailActorDelegate {
             }
             vc.memoDetailImageCollectionView.reloadData()
         }
-        
         vc.presentAlertWithAction(title: "이미지 삭제", message: "이미지를 삭제하시려면 삭제하기를 눌러주세요!", deleteAction)
     }
     
     func didTapImageCell(fromVC vc: MemoDetailVC, imageIndex: Int) {
+        
         self.view?.presentImageDetailVC(fromVC: vc, imageIndex: imageIndex)
     }
 }

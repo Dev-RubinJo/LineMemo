@@ -26,8 +26,6 @@ protocol MainActorDelegate: class {
     
     var memoListData: [Memo] { get }
     
-    func didLoadMainVC()
-    
     func didTapAddButton()
     
     func didTapMemoListTableViewCell(index: Int)

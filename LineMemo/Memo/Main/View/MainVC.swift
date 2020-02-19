@@ -43,7 +43,6 @@ class MainVC: BaseVC, MainVCDelegate {
         
         self.setMainUI()
         self.setDarkModeUI()
-        self.actor?.didLoadMainVC()
     }
     
     func setDarkModeUI() {

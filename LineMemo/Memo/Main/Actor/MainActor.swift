@@ -19,10 +19,6 @@ class MainActor: MainActorDelegate {
         }
     }
     
-    func didLoadMainVC() {
-        
-    }
-    
     func didTapAddButton() {
         self.view?.presentMemoDetailVCToAdd()
     }

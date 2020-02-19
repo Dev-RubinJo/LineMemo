@@ -61,7 +61,6 @@ class MemoDetailVC: BaseVC, MemoDetailVCProtocol {
         }
         
         self.imagePicker.delegate = self
-        self.memoDetailTitleTextField.delegate = self
         self.memoDetailContentTextView.delegate = self
         self.memoDetailImageCollectionView.delegate = self
         self.memoDetailImageCollectionView.dataSource = self
@@ -89,6 +88,10 @@ extension MemoDetailVC: MemoDetailVCRouterProtocol {
         vc.actor = actor
         actor.view = vc        
         return vc
+    }
+    
+    func presentImagePickerController(targetVC vc: UIImagePickerController) {
+        self.present(vc, animated: true, completion: nil)
     }
     
     func presentImageDetailVC(fromVC vc: MemoDetailVC, imageIndex: Int) {

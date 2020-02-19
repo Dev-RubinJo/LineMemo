@@ -26,9 +26,6 @@ extension MemoDetailVC {
         } else {
             let addButton = UIBarButtonItem(title: "add", style: .plain, target: self, action: #selector(self.pressAddButtonItem(_:)))
             self.navigationItem.rightBarButtonItem = addButton
-            
-            // TODO: 다크모드 라이트모드 전환시 placeholder 색상이 바로 안바뀌는 이유 찾기
-            // FIXME: 다크모드 라이트모드 전환시 placeholder 색상이 바로 안바뀌는 이슈 해결하기
             self.setMemoDetailTextView(self.memoDetailContentTextView)
         }
     }
@@ -65,6 +62,11 @@ extension MemoDetailVC {
         let memo = Memo(id: id, title: title, content: content, imageList: [])
         UserDefaults.standard.set(id + 1, forKey: "memoIdNumber")
         self.actor?.didTapAddButtonItem(memo: memo)
+        for image in self.imageList {
+            if let imageData = image.jpegData(compressionQuality: 0.3) {
+                self.actor?.appendImageToMemo(memo: memo, image: imageData)
+            }
+        }
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -77,39 +79,5 @@ extension MemoDetailVC {
     
     @objc func pressDeleteButton(_ sender: UIBarButtonItem) {
         self.actor?.presentDeleteMemoAlert(toVC: self)
-    }
-    
-    /// 사진 불러올 때의 액션시트 띄우기 함수
-    func showAddImageSheet() {
-        let addImageActionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        // 카메라 액션
-        let fromCameraAction = UIAlertAction(title: "카메라로 사진찍기", style: .default) { _ in
-            if UIImagePickerController.isSourceTypeAvailable(.camera) {
-                self.imagePicker.sourceType = .camera
-                self.present(self.imagePicker, animated: false, completion: nil)
-            }
-        }
-        // 앨범 액션
-        let fromAlbumAction = UIAlertAction(title: "앨범에서 사진 가져오기", style: .default) { _ in
-            if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-                self.imagePicker.sourceType = .photoLibrary
-                self.imagePicker.mediaTypes = ["public.image"]
-                self.imagePicker.modalPresentationStyle = .fullScreen
-                self.present(self.imagePicker, animated: true, completion: nil)
-            }
-        }
-        // URL로 사진 가져오기 액션
-        let fromURLAction = UIAlertAction(title: "URL로 사진 가져오기", style: .default) { _ in
-            self.actor?.presentGetUrlAlert(toVC: self)
-        }
-        
-        let cancelAction = UIAlertAction(title: "취소", style: .destructive, handler: nil)
-        
-        addImageActionSheet.addAction(fromCameraAction)
-        addImageActionSheet.addAction(fromAlbumAction)
-        addImageActionSheet.addAction(fromURLAction)
-        addImageActionSheet.addAction(cancelAction)
-        
-        self.present(addImageActionSheet, animated: true, completion: nil)
     }
 }

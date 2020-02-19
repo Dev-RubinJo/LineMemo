@@ -28,8 +28,6 @@ class MemoCell: UITableViewCell {
             self.memoCellImageView.isHidden = true
             self.memoCellImageViewWidth.constant = 0
         } else {
-            let imageViewWidth = 70
-            print(imageViewWidth)
             self.memoCellImageView.isHidden = false
             self.memoCellImageViewWidth.constant = 70
         }

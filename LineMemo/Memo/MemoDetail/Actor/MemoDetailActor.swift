@@ -124,8 +124,9 @@ extension MemoDetailActor {
     }
     
     /// 이미지를 가져오는 행위를 하는 함수 따로 정의(not delegate func)
+    /// Network로 따로 나누지 않은 이유 -> API호출이 아니고, response에 따라 분기가 많아지는 것이 아닌 2가지 경우밖에 없기 때문
     fileprivate func getImageFromURL(url: String, vc: MemoDetailVC) {
-        // 기능 명세에 `URL로 이미지를 추가하는 경우, 다운로드하여 첨부할 필요는 없습니다`라고 적혀있어서
+        // 프로그래머스 기능 명세에 `URL로 이미지를 추가하는 경우, 다운로드하여 첨부할 필요는 없습니다`라고 적혀있어서
         // realm Memo와 Image Data의 관리를 위해 다운로드하여 관리하는 것으로 통일
         Alamofire.request(url).responseImage { response in
             if let image = response.result.value {

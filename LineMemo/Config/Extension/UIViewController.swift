@@ -26,14 +26,7 @@ extension UIViewController {
             }
         }
     }
-    
-    /// 인디케이터 뷰 객체(싱글톤 객체) 가져오기
-    var indicator: IndicatorView {
-        get {
-            return IndicatorView.shared
-        }
-    }
-    
+
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer =
             UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))

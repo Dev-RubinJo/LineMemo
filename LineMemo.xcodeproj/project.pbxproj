@@ -31,7 +31,6 @@
 		43C2861E23F1595F007D3714 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2861D23F1595F007D3714 /* UIViewController.swift */; };
 		43C2862423F159C0007D3714 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862323F159C0007D3714 /* UIColor.swift */; };
 		43C2862723F159EC007D3714 /* BaseVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862623F159EC007D3714 /* BaseVCProtocol.swift */; };
-		43C2862923F15A0B007D3714 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862823F15A0B007D3714 /* IndicatorView.swift */; };
 		43C2862B23F15A26007D3714 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862A23F15A26007D3714 /* ColorPalette.swift */; };
 		43D53E2623F7028D005DFC4A /* MemoDetailVC+UITextView+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E2523F7028D005DFC4A /* MemoDetailVC+UITextView+UITextField.swift */; };
 		43D53E2823F702C7005DFC4A /* MemoDetailVC+UICollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D53E2723F702C7005DFC4A /* MemoDetailVC+UICollectionView.swift */; };
@@ -97,7 +96,6 @@
 		43C2861D23F1595F007D3714 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		43C2862323F159C0007D3714 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		43C2862623F159EC007D3714 /* BaseVCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCProtocol.swift; sourceTree = "<group>"; };
-		43C2862823F15A0B007D3714 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
 		43C2862A23F15A26007D3714 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		43D53E2523F7028D005DFC4A /* MemoDetailVC+UITextView+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoDetailVC+UITextView+UITextField.swift"; sourceTree = "<group>"; };
 		43D53E2723F702C7005DFC4A /* MemoDetailVC+UICollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MemoDetailVC+UICollectionView.swift"; sourceTree = "<group>"; };
@@ -328,7 +326,6 @@
 				43C2862523F159D9007D3714 /* Protocol */,
 				43C2861C23F1593F007D3714 /* Extension */,
 				43C2861A23F15921007D3714 /* BaseVC.swift */,
-				43C2862823F15A0B007D3714 /* IndicatorView.swift */,
 				43C2862A23F15A26007D3714 /* ColorPalette.swift */,
 				43527EF623F38A4100291561 /* RealmManager.swift */,
 			);
@@ -695,7 +692,6 @@
 				439BE62F23FD0CDC00EC77A9 /* ImageDetailVC+SetUI.swift in Sources */,
 				43F81E0323F558C4005081BE /* MainVC+TableView.swift in Sources */,
 				434D2B4023F2C50D00E1E0D1 /* SplashProtocol.swift in Sources */,
-				43C2862923F15A0B007D3714 /* IndicatorView.swift in Sources */,
 				43527EF523F389DC00291561 /* Memo.swift in Sources */,
 				43F81DF623F453DC005081BE /* MainVC+SetUI.swift in Sources */,
 				43F81E0023F5584F005081BE /* MemoCell.swift in Sources */,

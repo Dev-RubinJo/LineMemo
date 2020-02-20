@@ -29,8 +29,6 @@
 		43C2860F23F157B5007D3714 /* LineMemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2860E23F157B5007D3714 /* LineMemoTests.swift */; };
 		43C2861B23F15921007D3714 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2861A23F15921007D3714 /* BaseVC.swift */; };
 		43C2861E23F1595F007D3714 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2861D23F1595F007D3714 /* UIViewController.swift */; };
-		43C2862023F15980007D3714 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2861F23F15980007D3714 /* String.swift */; };
-		43C2862223F159AB007D3714 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862123F159AB007D3714 /* UIButton.swift */; };
 		43C2862423F159C0007D3714 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862323F159C0007D3714 /* UIColor.swift */; };
 		43C2862723F159EC007D3714 /* BaseVCProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862623F159EC007D3714 /* BaseVCProtocol.swift */; };
 		43C2862923F15A0B007D3714 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C2862823F15A0B007D3714 /* IndicatorView.swift */; };
@@ -97,8 +95,6 @@
 		43C2861023F157B5007D3714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43C2861A23F15921007D3714 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		43C2861D23F1595F007D3714 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
-		43C2861F23F15980007D3714 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		43C2862123F159AB007D3714 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 		43C2862323F159C0007D3714 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		43C2862623F159EC007D3714 /* BaseVCProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVCProtocol.swift; sourceTree = "<group>"; };
 		43C2862823F15A0B007D3714 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorView.swift; sourceTree = "<group>"; };
@@ -349,8 +345,6 @@
 		43C2861C23F1593F007D3714 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				43C2861F23F15980007D3714 /* String.swift */,
-				43C2862123F159AB007D3714 /* UIButton.swift */,
 				43C2862323F159C0007D3714 /* UIColor.swift */,
 				43C2861D23F1595F007D3714 /* UIViewController.swift */,
 			);
@@ -714,7 +708,6 @@
 				43C2861B23F15921007D3714 /* BaseVC.swift in Sources */,
 				439BE62F23FD0CDC00EC77A9 /* ImageDetailVC+SetUI.swift in Sources */,
 				43F81E0323F558C4005081BE /* MainVC+TableView.swift in Sources */,
-				43C2862023F15980007D3714 /* String.swift in Sources */,
 				434D2B4023F2C50D00E1E0D1 /* SplashProtocol.swift in Sources */,
 				43C2862923F15A0B007D3714 /* IndicatorView.swift in Sources */,
 				43527EF523F389DC00291561 /* Memo.swift in Sources */,
@@ -731,7 +724,6 @@
 				43F81E1023F57AFD005081BE /* MemoDetailVC+SetUI.swift in Sources */,
 				43D53E4723F971D2005DFC4A /* PagingVC.swift in Sources */,
 				43D53E3423F82A8E005DFC4A /* AuthorizationActor.swift in Sources */,
-				43C2862223F159AB007D3714 /* UIButton.swift in Sources */,
 				43D53E2B23F78957005DFC4A /* ImageCell.swift in Sources */,
 				439BE63123FD0DA400EC77A9 /* ImageDetailVC+UIPageViewControllerDelegate+UIPageViewControllerDataSource.swift in Sources */,
 			);

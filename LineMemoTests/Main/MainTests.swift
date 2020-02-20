@@ -20,13 +20,13 @@ class MainTests: XCTestCase {
     }
     
     func testMakeMainVC() {
-        let vc = MainVC.viewRouter.makeMainVC()
+        let vc = MainVC.makeMainVC()
         
         XCTAssertNotNil(vc)
     }
     
     func testMainVCActorIsNil() {
-        let vc = MainVC.viewRouter.makeMainVC()
+        let vc = MainVC.makeMainVC()
         
         XCTAssertNotNil(vc.actor!)
     }

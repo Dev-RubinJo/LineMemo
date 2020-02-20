@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AuthorizationVC: BaseVC, AuthorizationVCDelegate {
+class AuthorizationVC: BaseVC, AuthorizationVCProtocol {
     
     @IBOutlet weak var getAuthorizationButton: UIButton!
     

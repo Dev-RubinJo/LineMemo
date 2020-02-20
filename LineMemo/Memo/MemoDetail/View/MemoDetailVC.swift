@@ -79,7 +79,7 @@ class MemoDetailVC: BaseVC, MemoDetailVCProtocol {
         }
     }
 }
-extension MemoDetailVC: MemoDetailVCRouterProtocol {
+extension MemoDetailVC: MemoDetailVCRouterDelegate {
     
     static func makeMemoDetailVC() -> MemoDetailVC {
         let vc = MemoDetailVC()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SplashVCDelegate: BaseVCProtocol {
+protocol SplashVCProtocol: BaseVCProtocol {
     
     var actor: SplashActorDelegate? { get set }
 }

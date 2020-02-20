@@ -205,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				43F81DF423F453C2005081BE /* Extension */,
-				43527EF023F2E94900291561 /* MemoTableView */,
+				43527EF123F2E95C00291561 /* MemoCell */,
 				43527EE923F2CFE700291561 /* MainVC.swift */,
 				43527EEA23F2CFE700291561 /* MainVC.xib */,
 			);
@@ -236,21 +236,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		43527EF023F2E94900291561 /* MemoTableView */ = {
-			isa = PBXGroup;
-			children = (
-				43527EF123F2E95C00291561 /* MemoCell */,
-			);
-			path = MemoTableView;
-			sourceTree = "<group>";
-		};
 		43527EF123F2E95C00291561 /* MemoCell */ = {
 			isa = PBXGroup;
 			children = (
 				43F81DFE23F5584F005081BE /* MemoCell.swift */,
 				43F81DFF23F5584F005081BE /* MemoCell.xib */,
 			);
-			path = MemoCell;
+			name = MemoCell;
+			path = MemoTableView/MemoCell;
 			sourceTree = "<group>";
 		};
 		43527EF223F389AB00291561 /* Memo */ = {
@@ -479,19 +472,11 @@
 			isa = PBXGroup;
 			children = (
 				43F81E0A23F5751F005081BE /* Extension */,
-				43F81E0823F5750A005081BE /* ImageCollectionView */,
+				43F81E0923F57517005081BE /* ImageCell */,
 				43F81E0423F57191005081BE /* MemoDetailVC.swift */,
 				43F81E0523F57191005081BE /* MemoDetailVC.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		43F81E0823F5750A005081BE /* ImageCollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				43F81E0923F57517005081BE /* ImageCell */,
-			);
-			path = ImageCollectionView;
 			sourceTree = "<group>";
 		};
 		43F81E0923F57517005081BE /* ImageCell */ = {
@@ -500,7 +485,8 @@
 				43D53E2923F78957005DFC4A /* ImageCell.swift */,
 				43D53E2A23F78957005DFC4A /* ImageCell.xib */,
 			);
-			path = ImageCell;
+			name = ImageCell;
+			path = ImageCollectionView/ImageCell;
 			sourceTree = "<group>";
 		};
 		43F81E0A23F5751F005081BE /* Extension */ = {

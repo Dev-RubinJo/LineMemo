@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SplashVC: BaseVC, SplashVCDelegate {
+class SplashVC: BaseVC, SplashVCProtocol {
     
     @IBOutlet weak var splashLabel: UILabel!
     

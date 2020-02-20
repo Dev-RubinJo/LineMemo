@@ -13,7 +13,7 @@ protocol MemoDetailVCProtocol: BaseVCProtocol {
     var actor: MemoDetailActorDelegate? { get set }
 }
 
-protocol MemoDetailVCRouterProtocol: class {
+protocol MemoDetailVCRouterDelegate: class {
     
     static func makeMemoDetailVC() -> MemoDetailVC
     
@@ -24,7 +24,7 @@ protocol MemoDetailVCRouterProtocol: class {
 
 protocol MemoDetailActorDelegate: class {
     
-    var view: MemoDetailVCRouterProtocol? { get set }
+    var view: MemoDetailVCRouterDelegate? { get set }
     
     func appendImageToMemo(memo: Memo, image: Data)
     

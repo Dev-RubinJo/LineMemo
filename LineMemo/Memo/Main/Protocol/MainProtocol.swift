@@ -6,7 +6,7 @@
 //  Copyright © 2020 YooBin Jo. All rights reserved.
 //
 
-protocol MainVCDelegate: BaseVCProtocol {
+protocol MainVCProtocol: BaseVCProtocol {
     
     var actor: MainActorDelegate? { get set }
 }

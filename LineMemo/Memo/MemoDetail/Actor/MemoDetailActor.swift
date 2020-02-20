@@ -17,7 +17,7 @@ class MemoDetailActor: MemoDetailActorDelegate {
     static let shared = MemoDetailActor()
     private init() {}
     
-    weak var view: MemoDetailVCRouterProtocol?
+    weak var view: MemoDetailVCRouterDelegate?
     
     func appendImageToMemo(memo: Memo, image: Data) {
         MemoModel.shared.addImage(memo: memo, imageData: image)

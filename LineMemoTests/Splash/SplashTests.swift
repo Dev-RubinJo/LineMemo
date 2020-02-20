@@ -20,7 +20,7 @@ class SplashTests: XCTestCase {
     }
     
     func testMakeSplashVC() {
-        let vc = SplashVC.viewRouter.makeSplashVC()
+        let vc = SplashVC.makeSplashVC()
         
         XCTAssertNotNil(vc)
     }
@@ -38,7 +38,7 @@ class SplashTests: XCTestCase {
 //    }
 //
     func testAfterSplashIsActorNil() {
-        let vc = SplashVC.viewRouter.makeSplashVC()
+        let vc = SplashVC.makeSplashVC()
         vc.actor?.didLoadSplash()
         XCTAssertNil(vc.actor)
     }

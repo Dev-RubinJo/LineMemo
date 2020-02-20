@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainVC: BaseVC, MainVCDelegate {
+class MainVC: BaseVC, MainVCProtocol {
     
     @IBOutlet weak var mainVCTitleLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!

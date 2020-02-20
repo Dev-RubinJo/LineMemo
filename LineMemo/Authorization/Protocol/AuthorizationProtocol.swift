@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol AuthorizationVCDelegate: BaseVCProtocol {
+protocol AuthorizationVCProtocol: BaseVCProtocol {
     
     var actor: AuthorizationActorDelegate? { get set }
 }

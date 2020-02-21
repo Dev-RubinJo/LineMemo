@@ -24,8 +24,6 @@ class AuthorizationActor: AuthorizationActorDelegate {
             if !response {
                 self.dialog.addAction(self.action)
                 vc.present(self.dialog, animated: true, completion: nil)
-            } else {
-                
             }
         }
     }
@@ -37,8 +35,6 @@ class AuthorizationActor: AuthorizationActorDelegate {
                 if status != .authorized {
                     self.dialog.addAction(self.action)
                     vc.present(self.dialog, animated: true, completion: nil)
-                } else {
-                    //                    self.presentAlert(title: "Photos Access Denied", message: "App needs access to photos library.")
                 }
             })
         }
